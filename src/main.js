@@ -1,20 +1,10 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import Logo from './assets/logo.png';
+import Outgoing from './outgoing.js';
+import Incoming from './incoming.js';
+import icid from './incoming.js';
 import './styles.css';
+import $ from 'jquery';
 
 
-
-class Welcome extends React.Component {
-    render()
-            {
-
-               return(
-               <div>
-               <h1>webpack config file</h1>
-               <img src={Logo}></img>
-               </div>);
-            }
-}
-
-ReactDOM.render(<Welcome/>,document.getElementById('root'));
