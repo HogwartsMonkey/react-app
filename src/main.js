@@ -6,17 +6,24 @@ import Incoming from './incoming.js';
 import icid from './incoming.js';
 import './styles.css';
 import $ from 'jquery';
-import slotsHeaven from './brands.js';
+import slotsHeavenImage from './assets/slots-heaven.png';
 
-
-class mainOffer extends React.Component{
-    render(){
+const slotsHeaven = { 
+    image: {slotsHeavenImage},
+    offer: 'Get 100% Up to £100 Get Also 200 Free Spins'
+};
+console.log(slotsHeaven.image);
+console.log(slotsHeavenImage);
+function Head(props){
         return (
         <div className="img-container">
-           <img className="img-responsive" src="{slotsHeaven.image}" /> 
+           <img className="img-responsive" src={props.image.slotsHeavenImage}/>
+           <p>{props.offer}</p> 
         </div>
         );
-    }
 }
 
-ReactDOM.render(<mainOffer/>,document.getElementById('root'));
+
+
+
+ReactDOM.render(<Head offer={slotsHeaven.offer} image={slotsHeaven.image}/>,document.getElementById('root'));

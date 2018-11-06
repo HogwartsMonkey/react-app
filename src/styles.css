@@ -1,4 +1,4 @@
-*{box-sizing: border-box;color:black;font-size:14px;}
+*{box-sizing: border-box;color:black;font-size:14px;font-family: Arial, Helvetica, sans-serif;}
 html, body { margin: 0; padding: 0;}
 .img-responsive {width:100%;height:auto;}
 .img-container {position:absolute; top:50%;left:50%;transform: translate(-50%,-50%);}
@@ -10,3 +10,5 @@ html, body { margin: 0; padding: 0;}
 .header div> h1 { font-family: Arial, Helvetica, sans-serif;font-weight: 100;margin:0;padding:0; position: absolute;left:50%;top:50%;transform: translate(-50%,-50%)}
 .header div:after,.header div:before {content:"";clear:both;} 
 .main-offer {display:block; position:relative; overflow:hidden;min-height:200px;width:100%;background-color:black;}
+.main-offer .img-container {left:50%;}
+.main-offer p {color:white;white-space: nowrap;}
