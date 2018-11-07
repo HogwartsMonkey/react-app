@@ -1,9 +1,10 @@
 
-import slotsHeavenImage from './assets/slots-heaven.png';
 
 const slotsHeaven = { 
-    image: {slotsHeavenImage},
-    offer: 'Get 100% Up to £100 <br> Get Also 200 Free Spins'
-}
+    image: require('./assets/slots-heaven.png'),
+    offerBonus1: 'Get 100% Up to £100',
+    offerBonus2:'Get Also 200 Free Spins',
+    videoID: 'j0AfAMnjNVc'
+};  
 
 export default slotsHeaven;
