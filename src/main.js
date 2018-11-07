@@ -11,6 +11,9 @@ import YouTube from 'react-youtube';
 console.log(slotsHeaven.image);
 
 class Video extends React.Component {
+    constructor(props){
+        super(props);
+    }
     render() {
       const opts = {
         playerVars: { // https://developers.google.com/youtube/player_parameters
@@ -20,7 +23,7 @@ class Video extends React.Component {
    
       return (
         <YouTube className="video-container"
-          videoId="251H0IDGJAQ"
+          videoId={this.props.videoId}
           opts={opts}
           onReady={this._onReady}
         />
@@ -48,7 +51,7 @@ function Head(props){
                 </div>
         </div>
         <div className="col-2-3">
-            <Video className="video-container"/>
+            <Video className="video-container" videoId={props.videoId}/>
         </div>
     </React.Fragment>
         
@@ -56,4 +59,4 @@ function Head(props){
 }
 
 
-ReactDOM.render(<Head offer1={slotsHeaven.offerBonus1} offer2={slotsHeaven.offerBonus2} image={slotsHeaven.image}/>,document.getElementById('main-offer'));
+ReactDOM.render(<Head offer1={slotsHeaven.offerBonus1} offer2={slotsHeaven.offerBonus2} image={slotsHeaven.image}  videoId={slotsHeaven.videoId}/>,document.getElementById('main-offer'));
