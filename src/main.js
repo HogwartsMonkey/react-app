@@ -22,6 +22,7 @@ class Video extends React.Component {
       };
    
       return (
+        
         <YouTube className="video-container"
           videoId={this.props.videoId}
           opts={opts}
@@ -31,18 +32,22 @@ class Video extends React.Component {
     }
 }
 
-function Head(props){
-        return (
-     <React.Fragment>
-        <div className="col-1-3">
+class Offer extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <React.Fragment>
+            <div className="col-1-3">
             <div className="offer-image">
                 <div className="img-container">
-                <img className="img-responsive" src={props.image}/>
+                <img className="img-responsive" src={brands[this.props.offervalue].image}/>
                 </div>
             </div>
             <div className="offer-text">
-                <p>{props.offer1}</p> 
-                <p>{props.offer2}</p>
+                <p>{brands[this.props.offervalue].offerBonus1}</p> 
+                <p>{brands[this.props.offervalue].offerBonus2}</p>
             </div>
                 <div className="offer-button">
                     <button className="main-button">
@@ -51,13 +56,33 @@ function Head(props){
                 </div>
         </div>
         <div className="col-2-3">
-            <Video className="video-container" videoId={props.videoId}/>
+        <Video className="video-container" videoId={brands[this.props.offervalue].videoId}/>
         </div>
-        <div className="row">
-            <p>Discover Other Online Casinos</p>
-         </div> 
-    </React.Fragment>
+        </React.Fragment>
         );
+    }
+}
+
+class Head extends React.Component{
+
+    renderMainOffer(j){
+        return <Offer offervalue ={j}/>
+    }
+    
+        render(){
+        return ( 
+                <React.Fragment>
+                    {this.renderMainOffer(1)}
+                    <div className="row">
+                        <p>Discover Other Online Casinos</p>
+                    </div> 
+                    <div className="horizontal-scroll">
+                        <Scroll/>
+                    </div>
+                    
+            </React.Fragment>
+        );
+     }
 }
 
 
@@ -93,13 +118,7 @@ class Scroll extends React.Component{
     }
 }
 
-function App(){
-    return  (<React.Fragment>
-                            <Scroll/>
-        </React.Fragment>); 
-    }
 
 
 
-ReactDOM.render(<Head offer1={brands[2].offerBonus1} offer2={brands[2].offerBonus2} image={brands[2].image}  videoId={brands[2].videoId}/>,document.getElementById('main-offer'));
-ReactDOM.render(<App/>,document.getElementById('horizontal-scroll'));
+ReactDOM.render(<Head/>,document.getElementById('main-offer'));
