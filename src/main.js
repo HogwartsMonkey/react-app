@@ -1,14 +1,14 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import icid from './incoming.js';
-import slotsHeaven from './brands.js';
+import brands from './brands.js';
 import './styles.css';
 import $ from 'jquery';
 import YouTube from 'react-youtube';
 
 
 
-console.log(slotsHeaven.image);
+console.log(brands[0].image);
 
 class Video extends React.Component {
     constructor(props){
@@ -17,7 +17,7 @@ class Video extends React.Component {
     render() {
       const opts = {
         playerVars: { // https://developers.google.com/youtube/player_parameters
-          autoplay: 1
+          autoplay: 0
         }
       };
    
@@ -53,10 +53,53 @@ function Head(props){
         <div className="col-2-3">
             <Video className="video-container" videoId={props.videoId}/>
         </div>
+        <div className="row">
+            <p>Discover Other Online Casinos</p>
+         </div> 
     </React.Fragment>
-        
         );
 }
 
 
-ReactDOM.render(<Head offer1={slotsHeaven.offerBonus1} offer2={slotsHeaven.offerBonus2} image={slotsHeaven.image}  videoId={slotsHeaven.videoId}/>,document.getElementById('main-offer'));
+class Item extends React.Component {
+    constructor(props){
+        super(props);
+    }
+    render(){
+        return(
+            <div className="item">
+                <div className="img-container">
+                    <img className="img-responsive" src={this.props.value}/>
+                </div>
+            </div>
+        );
+    }
+}
+
+
+
+class Scroll extends React.Component{
+    renderItem(i){
+       return  <Item value ={brands[i].image}/>
+    }
+
+    render(){
+    return (
+       <div>
+            {this.renderItem(1)}
+            {this.renderItem(2)}
+        </div>
+    );
+    }
+}
+
+function App(){
+    return  (<React.Fragment>
+                            <Scroll/>
+        </React.Fragment>); 
+    }
+
+
+
+ReactDOM.render(<Head offer1={brands[2].offerBonus1} offer2={brands[2].offerBonus2} image={brands[2].image}  videoId={brands[2].videoId}/>,document.getElementById('main-offer'));
+ReactDOM.render(<App/>,document.getElementById('horizontal-scroll'));
