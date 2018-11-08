@@ -85,10 +85,10 @@ class Scroll extends React.Component{
 
     render(){
     return (
-       <div>
+       <React.Fragment>
             {this.renderItem(1)}
             {this.renderItem(2)}
-        </div>
+        </React.Fragment>
     );
     }
 }
