@@ -6,11 +6,7 @@ import './styles.css';
 import $ from 'jquery';
 import YouTube from 'react-youtube';
 
-
-
-console.log(brands[0].image);
-
-class Video extends React.Component {
+export default class Video extends React.Component {
     constructor(props){
         super(props);
     }
@@ -32,22 +28,30 @@ class Video extends React.Component {
     }
 }
 
+
+
+console.log(brands[0].image);
+
+
 class Offer extends React.Component{
     constructor(props){
         super(props);
+        this.state = { offervalue: this.props.offervalue};
+        this.replaceOffer = this.replaceOffer.bind(this);
     }
+
     render(){
         return(
             <React.Fragment>
             <div className="col-1-3">
             <div className="offer-image">
                 <div className="img-container">
-                <img className="img-responsive" src={brands[this.props.offervalue].image}/>
+                <img className="img-responsive" src={brands[this.state.offervalue].image}/>
                 </div>
             </div>
             <div className="offer-text">
-                <p>{brands[this.props.offervalue].offerBonus1}</p> 
-                <p>{brands[this.props.offervalue].offerBonus2}</p>
+                <p>{brands[this.state.offervalue].offerBonus1}</p> 
+                <p>{brands[this.state.offervalue].offerBonus2}</p>
             </div>
                 <div className="offer-button">
                     <button className="main-button">
@@ -56,7 +60,7 @@ class Offer extends React.Component{
                 </div>
         </div>
         <div className="col-2-3">
-        <Video className="video-container" videoId={brands[this.props.offervalue].videoId}/>
+        <Video className="video-container" videoId={brands[this.state.offervalue].videoId}/>
         </div>
         </React.Fragment>
         );
@@ -89,12 +93,14 @@ class Head extends React.Component{
 class Item extends React.Component {
     constructor(props){
         super(props);
+        this.state = {value: this.props.value}
     }
+    
     render(){
         return(
             <div className="item">
                 <div className="img-container">
-                    <img className="img-responsive" src={this.props.value}/>
+                    <img className="img-responsive" src={this.state.value}/>
                 </div>
             </div>
         );
@@ -102,23 +108,24 @@ class Item extends React.Component {
 }
 
 
-
 class Scroll extends React.Component{
     renderItem(i){
-       return  <Item value ={brands[i].image}/>
+       return  <Item value ={brands[i].image} />
     }
 
     render(){
     return (
        <React.Fragment>
+            {this.renderItem(0)}
             {this.renderItem(1)}
             {this.renderItem(2)}
+            {this.renderItem(3)}
+            {this.renderItem(4)}
+            {this.renderItem(5)}
+
         </React.Fragment>
     );
     }
 }
-
-
-
 
 ReactDOM.render(<Head/>,document.getElementById('main-offer'));
