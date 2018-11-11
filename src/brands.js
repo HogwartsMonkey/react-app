@@ -16,7 +16,7 @@ const playOjo = {
     image: require('./assets/play_ojo.png'),
     offerBonus1: 'Get 50 Free Spins',
     offerBonus2:'No Wagering Requirment',
-    terms:'',
+    terms:'T&Cs Apply. New Players Only. 18+  ',
     videoId: '251H0IDGJAQ'
 };  
 

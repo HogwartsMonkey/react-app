@@ -37,9 +37,8 @@ class Offer extends React.Component{
     constructor(props){
         super(props);
         this.state = { offervalue: this.props.offervalue};
-        this.replaceOffer = this.replaceOffer.bind(this);
     }
-
+   
     render(){
         return(
             <React.Fragment>
@@ -52,6 +51,8 @@ class Offer extends React.Component{
             <div className="offer-text">
                 <p>{brands[this.state.offervalue].offerBonus1}</p> 
                 <p>{brands[this.state.offervalue].offerBonus2}</p>
+                <p>{brands[this.state.offervalue].terms}</p>
+
             </div>
                 <div className="offer-button">
                     <button className="main-button">
@@ -68,7 +69,10 @@ class Offer extends React.Component{
 }
 
 class Head extends React.Component{
-
+    constructor(props){
+        super(props);
+        this.state = {mainOffer: 1}
+    }
     renderMainOffer(j){
         return <Offer offervalue ={j}/>
     }
@@ -76,7 +80,7 @@ class Head extends React.Component{
         render(){
         return ( 
                 <React.Fragment>
-                    {this.renderMainOffer(1)}
+                    {this.renderMainOffer(this.state.mainOffer)}
                     <div className="row">
                         <p>Discover Other Online Casinos</p>
                     </div> 
