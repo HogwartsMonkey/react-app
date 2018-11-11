@@ -82,7 +82,7 @@ class Head extends React.Component{
                 <React.Fragment>
                     {this.renderMainOffer(this.state.mainOffer)}
                     <div className="row">
-                        <p>Discover Other Online Casinos</p>
+                        <p>Discover More Online Casinos</p>
                     </div> 
                     <div className="horizontal-scroll">
                         <Scroll/>
