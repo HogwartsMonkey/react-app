@@ -6,6 +6,7 @@ import './styles.css';
 import $ from 'jquery';
 import YouTube from 'react-youtube';
 import Scroll from './scroll.js';
+import Reviews from './review.js';
 
 
 
@@ -103,7 +104,9 @@ class Head extends React.Component{
                     <div className="horizontal-scroll">
                         <Scroll function={this.changeMainOffer}/>
                     </div>
-                    
+                    <div className="details">
+                    <Reviews offervalue={this.state.mainOffer}/>
+                    </div>
             </React.Fragment>
         );
      }

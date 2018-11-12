@@ -18,6 +18,7 @@
             {this.renderItem(3)}
             {this.renderItem(4)}
             {this.renderItem(5)}
+            {this.renderItem(6)}
 
         </React.Fragment>
     );

@@ -3,16 +3,16 @@
 let brands = [];
 
 const slotsHeaven = { 
-    name:'slots-heaven',
+    name:'Slots-Heaven',
     image: require('./assets/slots-heaven.png'),
     offerBonus1: 'Get 100% Up to £100',
     offerBonus2:'Get Also 200 Free Spins',
-    terms:'',
+    terms:'Wagering X40. New Players Only | 18+. T&Cs Apply',
     videoId: '251H0IDGJAQ'
 };  
 
 const playOjo = { 
-    name:'play-ojo',
+    name:'Play-OJO',
     image: require('./assets/play_ojo.png'),
     offerBonus1: 'Get 50 Free Spins',
     offerBonus2:'No Wagering Requirment',
@@ -21,11 +21,11 @@ const playOjo = {
 };  
 
 const karamba = { 
-    name:'karamba',
+    name:'Karamba',
     image: require('./assets/karamba.png'),
     offerBonus1: 'Get 100% Up to £500',
     offerBonus2:'Get Also 100 Free Spins',
-    terms:'',
+    terms:'Wagering X35. New Players Only | 18+. T&Cs Apply.',
     videoId: 'io-f1TanwmU'
 };  
 
@@ -34,25 +34,34 @@ const Casino888 = {
     image: require('./assets/888.png'),
     offerBonus1: 'Get 200% Up to £500',
     offerBonus2:'',
-    terms:'',
+    terms:'Wagering X20. New Players Only | 18+. T&Cs Apply',
     videoId: '251H0IDGJAQ'
 }; 
 
 const mansionCasino = { 
-    name:'mansion',
+    name:'Mansion',
     image: require('./assets/8.png'),
     offerBonus1: 'Get 10% Cashback',
     offerBonus2:'Get Also Up to £500',
-    terms:'',
+    terms:'Wagering X40. New Players Only | 18+. T&Cs Apply',
     videoId: '251H0IDGJAQ'
 }; 
 
 const sloty = { 
-    name:'sloty',
+    name:'Sloty',
     image: require('./assets/sloty-logo.png'),
     offerBonus1: 'Get Up to £1500 Welcome Package',
     offerBonus2:'Get Also 300 Free Spins',
-    terms:'',
+    terms:'Wagering X40. New Players Only | 18+. T&Cs Apply',
+    videoId: '251H0IDGJAQ'
+}; 
+
+const royalPanda = { 
+    name:'Royal Panda',
+    image: require('./assets/royal-panda-logo.png'),
+    offerBonus1: 'Get 100 Up to £100',
+    offerBonus2:'Get Also 10 Free Spins',
+    terms:'Wagering X30. New Players Only | 18+. T&Cs Apply',
     videoId: '251H0IDGJAQ'
 }; 
  
@@ -62,5 +71,6 @@ brands.push(karamba);
 brands.push(Casino888);
 brands.push(mansionCasino);
 brands.push(sloty);
+brands.push(royalPanda);
 
 export default brands;
