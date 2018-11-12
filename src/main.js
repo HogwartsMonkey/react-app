@@ -38,6 +38,12 @@ class Offer extends React.Component{
         super(props);
         this.state = { offervalue: this.props.offervalue};
     }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.offervalue !== this.props.offervalue) {
+          this.setState({offervalue: this.props.offervalue})
+        }
+      }
    
     render(){
         return(
@@ -72,7 +78,13 @@ class Head extends React.Component{
     constructor(props){
         super(props);
         this.state = {mainOffer: 1}
+        this.changeMainOffer = this.changeMainOffer.bind(this);
     }
+
+    changeMainOffer(arrayLocation){
+        this.setState({mainOffer: arrayLocation})
+    }
+
     renderMainOffer(j){
         return <Offer offervalue ={j}/>
     }
@@ -85,7 +97,7 @@ class Head extends React.Component{
                         <p>Discover More Online Casinos</p>
                     </div> 
                     <div className="horizontal-scroll">
-                        <Scroll/>
+                        <Scroll function={this.changeMainOffer}/>
                     </div>
                     
             </React.Fragment>
@@ -94,27 +106,14 @@ class Head extends React.Component{
 }
 
 
-class Item extends React.Component {
-    constructor(props){
-        super(props);
-        this.state = {value: this.props.value}
-    }
-    
-    render(){
-        return(
-            <div className="item">
-                <div className="img-container">
-                    <img className="img-responsive" src={this.state.value}/>
-                </div>
-            </div>
-        );
-    }
-}
 
 
 class Scroll extends React.Component{
+    constructor(props){
+        super(props);
+    }
     renderItem(i){
-       return  <Item value ={brands[i].image} />
+       return  <Item value ={brands[i].image} function={this.props.function} arrayLocation={i}/>
     }
 
     render(){
@@ -129,6 +128,24 @@ class Scroll extends React.Component{
 
         </React.Fragment>
     );
+    }
+}
+
+
+class Item extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {value: this.props.value}
+    }
+    
+    render(){
+        return(
+            <div className="item">
+                <div className="img-container"  onClick={()=>this.props.function(this.props.arrayLocation)}>
+                    <img className="img-responsive" src={this.state.value}/>
+                </div>
+            </div>
+        );
     }
 }
 
