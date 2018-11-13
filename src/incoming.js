@@ -1,6 +1,6 @@
 
  export var icid = 54;
- export function incoming() {
+ export default function incoming() {
     $.ajax({
         url: 'https://api.top10bestukonlinecasinos.co.uk/incoming' + window.location.search,
         type: "GET",

@@ -6,8 +6,7 @@ import $ from 'jquery';
 import YouTube from 'react-youtube';
 import Scroll from './scroll.js';
 import Reviews from './review.js';
-import Incoming from './incoming.js';
-import icid from './incoming.js';
+import incoming from './incoming.js';
 
 
 
@@ -94,13 +93,17 @@ class Head extends React.Component{
     renderMainOffer(j){
         return <Offer offervalue ={j}/>
     }
-    
-    incoming(){
-        {Incoming()};
+
+    callIncoming(){
+        incoming();
     }
+
+    
+    
         render(){
         return ( 
                 <React.Fragment>
+                    {this.callIncoming()}
                     {this.renderMainOffer(this.state.mainOffer)}
                     <div className="row">
                         <p>Discover More Online Casinos</p>
@@ -110,8 +113,7 @@ class Head extends React.Component{
                     </div>
                     <div className="details">
                     <Reviews offervalue={this.state.mainOffer}/>
-                    </div>
-                   <incoming/>
+                    </div>  
             </React.Fragment>
         );
      }

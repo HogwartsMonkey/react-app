@@ -31,13 +31,13 @@ module.exports =
           ,
           {
             test: /\.(png|jpg|gif)$/,
-            use: [
+            use: 
               {
                 loader: 'file-loader',
                 options: {
                   name: '[path][name].[ext]'
                 }
-              }]
+              }
             }
           
             ]
