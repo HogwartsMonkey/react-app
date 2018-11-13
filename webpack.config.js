@@ -6,7 +6,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = 
 {
     entry:{ 
-      main: './src/main.js'
+      main: './src/main.js',
+      incoming: './src/incoming.js'
   },
     devtool: 'inline-source-map',
      mode: 'development',
@@ -47,7 +48,7 @@ module.exports =
         new ExtractTextPlugin("styles.css")
     ],
     output: {
-        filename: 'main.js',
+        filename: '[name].js',
         path: path.resolve(__dirname,'dist')
     },
     externals: {

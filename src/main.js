@@ -1,12 +1,13 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import icid from './incoming.js';
 import brands from './brands.js';
 import './styles.css';
 import $ from 'jquery';
 import YouTube from 'react-youtube';
 import Scroll from './scroll.js';
 import Reviews from './review.js';
+import Incoming from './incoming.js';
+import icid from './incoming.js';
 
 
 
@@ -94,6 +95,9 @@ class Head extends React.Component{
         return <Offer offervalue ={j}/>
     }
     
+    incoming(){
+        {Incoming()};
+    }
         render(){
         return ( 
                 <React.Fragment>
@@ -107,6 +111,7 @@ class Head extends React.Component{
                     <div className="details">
                     <Reviews offervalue={this.state.mainOffer}/>
                     </div>
+                   <incoming/>
             </React.Fragment>
         );
      }
