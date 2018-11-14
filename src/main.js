@@ -11,6 +11,7 @@ import incoming from './incoming.js';
 
 
 
+
 export default class Video extends React.Component {
     constructor(props){
         super(props);
@@ -97,13 +98,10 @@ class Head extends React.Component{
     callIncoming(){
         incoming();
     }
-
-    
     
         render(){
         return ( 
                 <React.Fragment>
-                    {this.callIncoming()}
                     {this.renderMainOffer(this.state.mainOffer)}
                     <div className="row">
                         <p>Discover More Online Casinos</p>
@@ -113,8 +111,9 @@ class Head extends React.Component{
                     </div>
                     <div className="details">
                     <Reviews offervalue={this.state.mainOffer}/>
-                    </div>  
-            </React.Fragment>
+                    </div>
+                        {this.callIncoming()}
+                </React.Fragment>
         );
      }
 }
