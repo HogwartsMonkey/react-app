@@ -6,7 +6,7 @@
         super(props);
     }
     renderItem(i){
-       return  <Item value ={brands[i].image} function={this.props.function} arrayLocation={i}/>
+       return  <Item value ={brands[i].image} parentFunction={this.props.function} arrayLocation={i}/>
     }
 
     render(){
@@ -35,7 +35,7 @@
     render(){
         return(
             <div className="item">
-                <div className="img-container"  onClick={()=>this.props.function(this.props.arrayLocation)}>
+                <div className="img-container"  onClick={()=>this.props.parentFunction(this.props.arrayLocation)}>
                     <img className="img-responsive" src={this.state.value}/>
                 </div>
             </div>

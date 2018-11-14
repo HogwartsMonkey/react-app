@@ -6,8 +6,8 @@ import $ from 'jquery';
 import YouTube from 'react-youtube';
 import Scroll from './scroll.js';
 import Reviews from './review.js';
-import incoming from './incoming.js';
-
+import {incoming} from './incoming.js';
+import {Outgoing} from './outgoing.js';
 
 
 
@@ -35,10 +35,6 @@ export default class Video extends React.Component {
 }
 
 
-
-console.log(brands[0].image);
-
-
 class Offer extends React.Component{
     constructor(props){
         super(props);
@@ -51,6 +47,10 @@ class Offer extends React.Component{
         }
       }
    
+    callOutgoing(offerlink,cpa,position,page,icid){
+        Outgoing(offerlink,cpa,position,page,icid);
+    }
+
     render(){
         return(
             <React.Fragment>
@@ -66,7 +66,7 @@ class Offer extends React.Component{
                 <p>{brands[this.state.offervalue].terms}</p>
 
             </div>
-                <div className="offer-button">
+                <div className="offer-button" onClick={()=>this.callOutgoing(brands[this.state.offervalue].offerlink,brands[this.state.offervalue].cpa,brands[this.state.offervalue].position,'page',this.props.icid)}>
                     <button className="main-button">
                         <p>Claim Bonus Offer</p>
                     </button>
@@ -83,7 +83,7 @@ class Offer extends React.Component{
 class Head extends React.Component{
     constructor(props){
         super(props);
-        this.state = {mainOffer: 1}
+        this.state = {mainOffer: 1, icid: 54}
         this.changeMainOffer = this.changeMainOffer.bind(this);
     }
 
@@ -92,13 +92,14 @@ class Head extends React.Component{
     }
 
     renderMainOffer(j){
-        return <Offer offervalue ={j}/>
+        return <Offer offervalue ={j} function={Outgoing} icid={this.state.icid}/>
     }
 
-    callIncoming(){
-        incoming();
+    componentWillMount() {
+        incoming.call(this);
     }
     
+
         render(){
         return ( 
                 <React.Fragment>
@@ -112,7 +113,7 @@ class Head extends React.Component{
                     <div className="details">
                     <Reviews offervalue={this.state.mainOffer}/>
                     </div>
-                        {this.callIncoming()}
+                        
                 </React.Fragment>
         );
      }

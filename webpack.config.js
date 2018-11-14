@@ -6,8 +6,8 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = 
 {
     entry:{ 
-      main: './src/main.js',
-      incoming: './src/incoming.js'
+      main: './src/main.js'
+     
   },
     devtool: 'inline-source-map',
      mode: 'development',

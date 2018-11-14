@@ -8,7 +8,10 @@ const slotsHeaven = {
     offerBonus1: 'Get 100% Up to £100',
     offerBonus2:'Get Also 200 Free Spins',
     terms:'Wagering X40. New Players Only | 18+. T&Cs Apply',
-    videoId: '251H0IDGJAQ'
+    videoId: '251H0IDGJAQ',
+    offerlink: '31',
+    cpa:'350',
+    position: '1'
 };  
 
 const playOjo = { 
@@ -17,7 +20,10 @@ const playOjo = {
     offerBonus1: 'Get 50 Free Spins',
     offerBonus2:'No Wagering Requirment',
     terms:'T&Cs Apply. New Players Only. 18+  ',
-    videoId: '251H0IDGJAQ'
+    videoId: '251H0IDGJAQ',
+    offerlink: '53',
+    cpa:'350',
+    position: '2'
 };  
 
 const karamba = { 
@@ -26,7 +32,10 @@ const karamba = {
     offerBonus1: 'Get 100% Up to £500',
     offerBonus2:'Get Also 100 Free Spins',
     terms:'Wagering X35. New Players Only | 18+. T&Cs Apply.',
-    videoId: 'io-f1TanwmU'
+    videoId: 'io-f1TanwmU',
+    offerlink: '33',
+    cpa:'300',
+    position: '3'
 };  
 
 const Casino888 = { 
@@ -35,7 +44,10 @@ const Casino888 = {
     offerBonus1: 'Get 200% Up to £500',
     offerBonus2:'',
     terms:'Wagering X20. New Players Only | 18+. T&Cs Apply',
-    videoId: '251H0IDGJAQ'
+    videoId: '251H0IDGJAQ',
+    offerlink: '17',
+    cpa:'450',
+    position: '4'
 }; 
 
 const mansionCasino = { 
@@ -44,7 +56,10 @@ const mansionCasino = {
     offerBonus1: 'Get 10% Cashback',
     offerBonus2:'Get Also Up to £500',
     terms:'Wagering X40. New Players Only | 18+. T&Cs Apply',
-    videoId: '251H0IDGJAQ'
+    videoId: '251H0IDGJAQ',
+    offerlink: '19',
+    cpa:'500',
+    position: '5'
 }; 
 
 const sloty = { 
@@ -53,7 +68,10 @@ const sloty = {
     offerBonus1: 'Get Up to £1500 Welcome Package',
     offerBonus2:'Get Also 300 Free Spins',
     terms:'Wagering X40. New Players Only | 18+. T&Cs Apply',
-    videoId: '251H0IDGJAQ'
+    videoId: '251H0IDGJAQ',
+    offerlink: '35',
+    cpa:'280',
+    position: '6'
 }; 
 
 const royalPanda = { 
@@ -62,7 +80,10 @@ const royalPanda = {
     offerBonus1: 'Get 100 Up to £100',
     offerBonus2:'Get Also 10 Free Spins',
     terms:'Wagering X30. New Players Only | 18+. T&Cs Apply',
-    videoId: '251H0IDGJAQ'
+    videoId: '251H0IDGJAQ',
+    offerlink: '22',
+    cpa:'350',
+    position: '7'
 }; 
  
 brands.push(slotsHeaven);
