@@ -11,7 +11,11 @@ const slotsHeaven = {
     videoId: '251H0IDGJAQ',
     offerlink: '31',
     cpa:'350',
-    position: '1'
+    position: '1',
+    keypoint1: 'Best Games',
+    keypoint2:'Fair Offer',
+    keypoint3:'Pay with PayPal',
+    keypoint4:'Exclusive Promotion'
 };  
 
 const playOjo = { 
@@ -85,6 +89,18 @@ const royalPanda = {
     cpa:'350',
     position: '7'
 }; 
+
+const casinoOfDreams = { 
+    name:'Casino of Dream',
+    image: require('./assets/casino_of_dreams.png'),
+    offerBonus1: 'Get 100% Up to £1000',
+    offerBonus2:'Get Also 50 Free Spins',
+    terms:'Wagering X40. Min Deposit £20. New Players Only | 18+. T&Cs Apply',
+    videoId: '251H0IDGJAQ',
+    offerlink: '26',
+    cpa:'300',
+    position: '8'
+}; 
  
 brands.push(slotsHeaven);
 brands.push(playOjo);
@@ -93,5 +109,6 @@ brands.push(Casino888);
 brands.push(mansionCasino);
 brands.push(sloty);
 brands.push(royalPanda);
+brands.push(casinoOfDreams);
 
 export default brands;

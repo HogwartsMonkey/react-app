@@ -68,7 +68,9 @@ class Offer extends React.Component{
             </div>
                 <div className="offer-button" onClick={()=>this.callOutgoing(brands[this.state.offervalue].offerlink,brands[this.state.offervalue].cpa,brands[this.state.offervalue].position,'page',this.props.icid)}>
                     <button className="main-button">
-                        <p>Claim Bonus Offer</p>
+                        <div>
+                            <p>Claim Bonus Offer</p>
+                         </div>
                     </button>
                 </div>
         </div>
@@ -83,7 +85,7 @@ class Offer extends React.Component{
 class Head extends React.Component{
     constructor(props){
         super(props);
-        this.state = {mainOffer: 1, icid: 54}
+        this.state = {mainOffer: 0, icid: 54}
         this.changeMainOffer = this.changeMainOffer.bind(this);
     }
 
@@ -110,7 +112,7 @@ class Head extends React.Component{
                     <div className="horizontal-scroll">
                         <Scroll function={this.changeMainOffer}/>
                     </div>
-                    <div className="details">
+                    <div id="details">
                     <Reviews offervalue={this.state.mainOffer}/>
                     </div>
                         

@@ -6,7 +6,7 @@
         super(props);
     }
     renderItem(i){
-       return  <Item value ={brands[i].image} parentFunction={this.props.function} arrayLocation={i}/>
+       return  <Item image ={brands[i].image} parentFunction={this.props.function} arrayLocation={i}/>
     }
 
     render(){
@@ -19,6 +19,7 @@
             {this.renderItem(4)}
             {this.renderItem(5)}
             {this.renderItem(6)}
+            {this.renderItem(7)}
 
         </React.Fragment>
     );
@@ -29,14 +30,14 @@
   class Item extends React.Component {
     constructor(props){
         super(props);
-        this.state = {value: this.props.value}
+        this.state = {image: this.props.image}
     }
     
     render(){
         return(
             <div className="item">
                 <div className="img-container"  onClick={()=>this.props.parentFunction(this.props.arrayLocation)}>
-                    <img className="img-responsive" src={this.state.value}/>
+                    <img className="img-responsive" src={this.state.image}/>
                 </div>
             </div>
         );
