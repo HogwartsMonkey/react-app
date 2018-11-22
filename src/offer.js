@@ -37,7 +37,7 @@ export default class Offer extends React.Component{
             </div>
                 <div className="offer-button" onClick={()=>this.callOutgoing(brands[this.state.offervalue].offerlink,brands[this.state.offervalue].cpa,brands[this.state.offervalue].position,'page',this.props.icid)}>
                     <button className="main-button">Claim Bonus Offer </button>
-                        <div className="shine"> </div>
+                        
                 </div>
         </div>
         <div className="col-2-3">

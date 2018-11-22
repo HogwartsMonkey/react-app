@@ -40,7 +40,7 @@ button:focus{outline:0;}
     .header div {height:50%;width:calc(100%/4);padding:0;}
     .header div:first-of-type {display:block;float:none;width:100%;}
     .header div.img-container {width:70%;}
-    .header div.img-container > img {height:100%;}
+    .header div.img-container > img {height:90%;width:auto;}
     .header div> h1 {font-size:12px;white-space: nowrap;font-weight: 500;}
     .header div:nth-of-type(2) > h1 {padding-left:5px;}
 }
@@ -56,7 +56,11 @@ button:focus{outline:0;}
 #main-offer .offer-button {height:calc(100%/6);position:relative;}
 
 #main-offer .offer-button {position:relative;width:100%;border:none;background-image:linear-gradient(-90deg,orange,rgb(244,134,56));transition:background-image,5s;&:hover.shine{transform: skewX(20deg) translateX(300px);} }
-#main-offer .offer-button .main-button{width:100%;height:100%;background:steelblue;color:white;border:0;transition: background .3s linear;}
+#main-offer .offer-button .main-button{width:100%;height:105%;cursor: pointer;background-size: 200% 100%;background-image: linear-gradient(to right, #f7d308, #ff9a44, #ef9d43, #e75516);color:white;border:0; 
+    -moz-transition: all .4s ease-in-out;-o-transition: all .4s ease-in-out;-webkit-transition: all .4s ease-in-out;transition: all .4s ease-in-out;&:hover{background-position: 100% 0;-moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;}}
 #main-offer .offer-button .main-button .shine {position: absolute;top: 0;left: -70px;height: 98px; width: 50px;transition: all .3s linear;transform: skewX(20deg) translateX(0);}
 #main-offer .offer-text p:nth-of-type(1) {padding-top:10px;}
 #main-offer .offer-text p:nth-of-type(3) {font-size:12px;}
