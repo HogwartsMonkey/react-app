@@ -7,6 +7,7 @@ import {incoming} from './incoming.js';
 import Offer from './offer.js';
 import Scroll from './scroll.js';
 import Reviews from './review.js';
+import { runInThisContext } from 'vm';
 
 
 
@@ -14,12 +15,13 @@ import Reviews from './review.js';
 class Head extends React.Component{
     constructor(props){
         super(props);
-        this.state = {mainOffer: 0, icid: 54}
+        this.state = {mainOffer: 0, icid: 54, scrollLeft: 200}
         this.changeMainOffer = this.changeMainOffer.bind(this);
+        this.handleSrcollRight = this.handleSrcollRight.bind(this);
     }
 
-    changeMainOffer(arrayLocation){
-        this.setState({mainOffer: arrayLocation})
+    changeMainOffer(id){
+        this.setState({mainOffer: id})
     }
 
     renderMainOffer(j){
@@ -29,8 +31,16 @@ class Head extends React.Component{
     componentWillMount() {
         incoming.call(this);
     }
-    
 
+    handleSrcollRight(){
+        let e= document.querySelector('.horizontal-scroll');
+        let item= document.querySelector('.horizontal-scroll .item');
+        let scrollX= item.style.width;
+        this.setState({scrollLeft:scrollX +20})
+        e.scrollLeft = this.state.scrollLeft;    
+    }
+
+    
         render(){
         return ( 
                 <React.Fragment>
@@ -39,15 +49,13 @@ class Head extends React.Component{
                         <p>Discover More Online Casinos</p>
                     </div> 
                     <div className="scroll-menu-warpper">
-                        <div className="paddle-left">
-                            <button className="button-left"></button>
-                        </div>
-                        <div className="horizontal-scroll">
+                      <div className="paddle-left">
+                          <button className="button-left" onClick={this.handleSrcollRight   }></button>
+                      </div>
+                        <div className="horizontal-scroll" ref="scroller">
                             <Scroll function={this.changeMainOffer}/>
                         </div>
-                        <div className="paddle-right">
-                            <button className="button-right"></button>
-                        </div>
+                       
                     </div>
                     <div id="details">
                     <Reviews offervalue={this.state.mainOffer}/>
