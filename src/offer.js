@@ -14,6 +14,9 @@ export default class Offer extends React.Component{
         if (prevProps.offervalue !== this.props.offervalue) {
           this.setState({offervalue: this.props.offervalue})
         }
+        else {
+            return false;
+        }
       }
    
     callOutgoing(offerlink,cpa,position,page,icid){
