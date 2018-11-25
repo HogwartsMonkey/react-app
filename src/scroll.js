@@ -9,11 +9,10 @@
        return  <Item image={brands[i].image} changeMainOffer={this.props.function} id={i}/>
     }
 
-    
-
     render(){
     return (
-       <React.Fragment>
+
+        <div className="horizontal-scroll">
             {this.renderItem(0)}
             {this.renderItem(1)}
             {this.renderItem(2)}
@@ -23,7 +22,7 @@
             {this.renderItem(6)}
             {this.renderItem(7)}
 
-        </React.Fragment>
+        </div>
     );
     }
 }

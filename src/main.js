@@ -37,8 +37,14 @@ class Head extends React.Component{
                     <div className="row">
                         <p>Discover More Online Casinos</p>
                     </div> 
-                    <div className="horizontal-scroll">
+                    <div className="scroll-menu-warpper">
+                        <div className="paddle-left">
+                            <button className="button-left"></button>
+                        </div>
                         <Scroll function={this.changeMainOffer}/>
+                        <div className="paddle-right">
+                            <button className="button-right"></button>
+                        </div>
                     </div>
                     <div id="details">
                     <Reviews offervalue={this.state.mainOffer}/>
