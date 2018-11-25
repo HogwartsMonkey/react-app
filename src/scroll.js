@@ -11,7 +11,10 @@
 
     render(){
     return (
-
+        <React.Fragment>
+        <div className="paddle-left">
+            <button className="button-left"></button>
+        </div>
         <div className="horizontal-scroll">
             {this.renderItem(0)}
             {this.renderItem(1)}
@@ -21,8 +24,11 @@
             {this.renderItem(5)}
             {this.renderItem(6)}
             {this.renderItem(7)}
-
         </div>
+        <div className="paddle-right">
+            <button className="button-right"></button>
+        </div>
+        </React.Fragment>
     );
     }
 }

@@ -13,7 +13,7 @@ import Reviews from './review.js';
 class Head extends React.Component{
     constructor(props){
         super(props);
-        this.state = {mainOffer: 0, icid: 54}
+        this.state = {mainOffer: 0, icid: 54, scrollLeft: 200}
         this.changeMainOffer = this.changeMainOffer.bind(this);
     }
 
@@ -28,6 +28,10 @@ class Head extends React.Component{
     componentWillMount() {
         incoming.call(this);
     }
+
+    scrollLeft(){
+        alert(200);
+    }
     
 
         render(){
@@ -37,15 +41,18 @@ class Head extends React.Component{
                     <div className="row">
                         <p>Discover More Online Casinos</p>
                     </div> 
-                    <div className="scroll-menu-warpper">
-                        <div className="paddle-left">
-                            <button className="button-left"></button>
+                    <div className="scroll-menu-warpper">  
+                         <div className="paddle-left">
+                                <button className="button-left" onClick={this.scrollLeft}></button>
                         </div>
+                        <div className="horizontal-scroll">
                         <Scroll function={this.changeMainOffer}/>
-                        <div className="paddle-right">
-                            <button className="button-right"></button>
-                        </div>
+                         </div>
+                    <div className="paddle-right">
+                        <button className="button-right"></button>
                     </div>
+                     </div>
+
                     <div id="details">
                     <Reviews offervalue={this.state.mainOffer}/>
                     </div>
