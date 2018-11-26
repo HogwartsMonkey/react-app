@@ -7,13 +7,14 @@ import {incoming} from './incoming.js';
 import Offer from './offer.js';
 import Scroll from './scroll.js';
 import Reviews from './review.js';
+import animateScrollTo from 'animated-scroll-to';
 
 
 
 class Head extends React.Component{
     constructor(props){
         super(props);
-        this.state = {mainOffer: 0, icid: 54, scroll: 0, menuSize: ''}
+        this.state = {mainOffer: 0, icid: 54, scrollPosition: 0, menuSize: 0 ,prevPosition: 0}
         this.changeMainOffer = this.changeMainOffer.bind(this);
         this.scrollLeft = this.scrollLeft.bind(this);
     }
@@ -33,20 +34,41 @@ class Head extends React.Component{
     scrollLeft(){
         let scrollMenu = document.querySelector('.horizontal-scroll');
         let menuWidth =document.querySelector('.horizontal-scroll').getBoundingClientRect().width;
+        let menuLeft = document.querySelector('.horizontal-scroll').getBoundingClientRect().left;
         let itemWidth= document.querySelector('.item').getBoundingClientRect().width;
-        if (!this.state.menuSize){
-            this.setState({menuSize : menuWidth})
-        }
-            else if (this.state.menuSize !== menuWidth){
-            this.setState({scroll: itemWidth})
-        }
-        console.log(this.state.scroll)
-        console.log({menuWidth});
-        console.log({itemWidth});
-        this.setState({scroll :this.state.scroll + itemWidth});
-        scrollMenu.scrollLeft = this.state.scroll;
+        let currentPosition = this.state.prevPosition;
+        const options = {
+            speed: 500,
+            minDuration: 250,
+            maxDuration: 1500,
+            element: document.querySelector('.horizontal-scroll'),
+            offset: 0,
+            cancelOnUserAction: true,
+            passive: true,
+            horizontal: true,
+            onComplete: function() {}
+          };
+        if (this.state.menuSize == 0){
+            this.setState({menuSize : menuWidth},function(){
+                this.setState({scrollPosition: this.state.scrollPosition + itemWidth},function(){
+                    let desieredPosition = this.state.scrollPosition;
+                    animateScrollTo(desieredPosition,options) })
+        })
+        
     }
+        else {
+            this.setState({scrollPosition: this.state.scrollPosition + itemWidth},function(){
+                let desieredPosition = this.state.scrollPosition;
+                animateScrollTo(desieredPosition,options) })
+    }
+
+        
     
+              
+
+            this.setState({prevPosition: this.state.scrollPosition});         
+            
+}
 
         render(){
         return ( 
