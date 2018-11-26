@@ -14,7 +14,7 @@ import scrollRight from './scroll-right.js';
 class Head extends React.Component{
     constructor(props){
         super(props);
-        this.state = {mainOffer: 0, icid: 54, scrollPosition: 0, menuSize: 0 ,prevPosition: 0}
+        this.state = {mainOffer: 0, icid: 54, scrollPosition: 0, menuSize: 0, clicksCounter :0, }
         this.changeMainOffer = this.changeMainOffer.bind(this);
         this.scrollLeft = scrollLeft.bind(this);
         this.scrollRight = scrollRight.bind(this);
