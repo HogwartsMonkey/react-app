@@ -32,11 +32,8 @@ class Head extends React.Component{
     }
 
     scrollLeft(){
-        let scrollMenu = document.querySelector('.horizontal-scroll');
         let menuWidth =document.querySelector('.horizontal-scroll').getBoundingClientRect().width;
-        let menuLeft = document.querySelector('.horizontal-scroll').getBoundingClientRect().left;
         let itemWidth= document.querySelector('.item').getBoundingClientRect().width;
-        let currentPosition = this.state.prevPosition;
         const options = {
             speed: 500,
             minDuration: 250,
@@ -61,13 +58,7 @@ class Head extends React.Component{
                 let desieredPosition = this.state.scrollPosition;
                 animateScrollTo(desieredPosition,options) })
     }
-
-        
-    
-              
-
-            this.setState({prevPosition: this.state.scrollPosition});         
-            
+             
 }
 
         render(){
