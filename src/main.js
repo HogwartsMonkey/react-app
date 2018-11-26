@@ -1,13 +1,13 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import './styles.scss';
-import $ from 'jquery';
 import brands from './brands.js';
 import {incoming} from './incoming.js';
 import Offer from './offer.js';
 import Scroll from './scroll.js';
 import Reviews from './review.js';
-import animateScrollTo from 'animated-scroll-to';
+import scrollLeft from './scroll-left.js';
+import scrollRight from './scroll-right.js';
 
 
 
@@ -16,7 +16,8 @@ class Head extends React.Component{
         super(props);
         this.state = {mainOffer: 0, icid: 54, scrollPosition: 0, menuSize: 0 ,prevPosition: 0}
         this.changeMainOffer = this.changeMainOffer.bind(this);
-        this.scrollLeft = this.scrollLeft.bind(this);
+        this.scrollLeft = scrollLeft.bind(this);
+        this.scrollRight = scrollRight.bind(this);
     }
 
     changeMainOffer(id){
@@ -31,36 +32,7 @@ class Head extends React.Component{
         incoming.call(this);
     }
 
-    scrollLeft(){
-        let menuWidth =document.querySelector('.horizontal-scroll').getBoundingClientRect().width;
-        let itemWidth= document.querySelector('.item').getBoundingClientRect().width;
-        const options = {
-            speed: 500,
-            minDuration: 250,
-            maxDuration: 1500,
-            element: document.querySelector('.horizontal-scroll'),
-            offset: 0,
-            cancelOnUserAction: true,
-            passive: true,
-            horizontal: true,
-            onComplete: function() {}
-          };
-        if (this.state.menuSize == 0){
-            this.setState({menuSize : menuWidth},function(){
-                this.setState({scrollPosition: this.state.scrollPosition + itemWidth},function(){
-                    let desieredPosition = this.state.scrollPosition;
-                    animateScrollTo(desieredPosition,options) })
-        })
-        
-    }
-        else {
-            this.setState({scrollPosition: this.state.scrollPosition + itemWidth},function(){
-                let desieredPosition = this.state.scrollPosition;
-                animateScrollTo(desieredPosition,options) })
-    }
-             
-}
-
+     
         render(){
         return ( 
                 <React.Fragment>
@@ -70,13 +42,13 @@ class Head extends React.Component{
                     </div> 
                     <div className="scroll-menu-warpper">  
                          <div className="paddle-left">
-                                <button className="button-left" onClick={this.scrollLeft}></button>
+                                <button className="button-left" onClick= {this.scrollLeft}></button>
                         </div>
                         <div className="horizontal-scroll">
                         <Scroll function={this.changeMainOffer}/>
                          </div>
                     <div className="paddle-right">
-                        <button className="button-right"></button>
+                        <button className="button-right"onClick= {this.scrollRight} ></button>
                     </div>
                      </div>
 
