@@ -13,8 +13,9 @@ import Reviews from './review.js';
 class Head extends React.Component{
     constructor(props){
         super(props);
-        this.state = {mainOffer: 0, icid: 54, scrollLeft: 200}
+        this.state = {mainOffer: 0, icid: 54, scroll: 0, menuSize: ''}
         this.changeMainOffer = this.changeMainOffer.bind(this);
+        this.scrollLeft = this.scrollLeft.bind(this);
     }
 
     changeMainOffer(id){
@@ -30,7 +31,20 @@ class Head extends React.Component{
     }
 
     scrollLeft(){
-        alert(200);
+        let scrollMenu = document.querySelector('.horizontal-scroll');
+        let menuWidth =document.querySelector('.horizontal-scroll').getBoundingClientRect().width;
+        let itemWidth= document.querySelector('.item').getBoundingClientRect().width;
+        if (!this.state.menuSize){
+            this.setState({menuSize : menuWidth})
+        }
+            else if (this.state.menuSize !== menuWidth){
+            this.setState({scroll: itemWidth})
+        }
+        console.log(this.state.scroll)
+        console.log({menuWidth});
+        console.log({itemWidth});
+        this.setState({scroll :this.state.scroll + itemWidth});
+        scrollMenu.scrollLeft = this.state.scroll;
     }
     
 
