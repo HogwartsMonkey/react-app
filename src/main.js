@@ -8,6 +8,8 @@ import Scroll from './scroll.js';
 import Reviews from './review.js';
 import scrollLeft from './scroll-left.js';
 import scrollRight from './scroll-right.js';
+import Header from './header.js';
+
 
 
 
@@ -36,19 +38,20 @@ class Head extends React.Component{
         render(){
         return ( 
                 <React.Fragment>
+                   <Header function={this.state.offervalue}/>
                     {this.renderMainOffer(this.state.mainOffer)}
                     <div className="row">
                         <p>Discover More Online Casinos</p>
                     </div> 
                     <div className="scroll-menu-warpper">  
                          <div className="paddle-left">
-                                <button className="button-left" onClick= {this.scrollLeft}>&#x3c;</button>
+                                <button className="button-left" onClick={this.scrollRight}>&#x3c;</button>
                         </div>
                         <div className="horizontal-scroll">
                         <Scroll function={this.changeMainOffer}/>
                          </div>
                     <div className="paddle-right">
-                        <button className="button-right"onClick= {this.scrollRight} >&#x3e;</button>
+                        <button className="button-right"onClick= {this.scrollLeft} >&#x3e;</button>
                     </div>
                      </div>
 

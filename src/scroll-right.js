@@ -27,7 +27,7 @@ export default function scrollLeft(){
     })
     
 }
-    else if (this.state.clicksCounter <= maxClicks && ((this.state.clicksCounter )>0)){
+    else if (this.state.clicksCounter <= maxClicks && this.state.clicksCounter >0){
         this.setState({scrollPosition: this.state.scrollPosition - itemWidth,clicksCounter: this.state.clicksCounter-1},function(){
             let desieredPosition = this.state.scrollPosition;
             
