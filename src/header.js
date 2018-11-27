@@ -1,23 +1,34 @@
-import React,{Component} from 'react';
+import React from 'react';
 import Logo from './assets/logo.png';
+
+
 
 export default class Header extends React.Component{
     constructor(props){
         super(props);
+        this.state = {currentPosition: 1};
+        this.moveBar = this.moveBar.bind(this);
+        this.elementRef = React.createRef();
     }
-    
+
+    moveBar(desieredPosition){
+        let element = this.elementRef.current;
+        let previousPosition = this.state.currentPosition;
+        console.log({element});
+           
+    }
 
 render(){
     return(
-<div class="header">
+<div className="header">
         
         <div >
-            <div class="img-container">
-                <img class="img-responsive" src={Logo}/>
+            <div className="img-container">
+                <img className="img-responsive" src={Logo}/>
             </div>
-        </div
-        >
-        <div >
+        </div>
+
+        <div onClick={this.moveBar(2)} ref={this.elementRef}>
             <h1>Best Casinos</h1>
             
         </div>
@@ -33,10 +44,10 @@ render(){
          <div>
              <h1>Sport</h1>
          </div>
-         <div class="row">
-            <div class="col-1-2"></div>
-            <div class="col-1-2">
-                <div class="bar"></div>
+         <div className="row">
+            <div className="col-1-2"></div>
+            <div className="col-1-2">
+                <div className="bar"></div>
             </div>
          </div>
 
