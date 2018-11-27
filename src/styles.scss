@@ -85,8 +85,8 @@ button:focus{outline:0;}
 .horizontal-scroll .item:nth-of-type(2){}
 .paddle-left {position: absolute;width:20px;height:150px;top:0;left:0;background-color:black;z-index:2}
 .paddle-right {position: absolute;width:20px;height:150px;top:0;right:0;background-color:black;z-index:2;}
-.button-left {position: absolute;top:50%; left:50%; transform: translate(-50%,-50%);background-color:orange;width:10px;height:10px;z-index:1;}
-.button-right {position: absolute;top:50%; left:50%; transform: translate(-50%,-50%);background-color:orange;width:10px;height:10px;z-index:1;}
+.button-left {position: absolute;top:50%; left:50%; transform: translate(-50%,-50%);border:none; background-color:transparent;font-weight: 600;color:white;width:10px;height:10px;z-index:1;}
+.button-right {position: absolute;top:50%; left:50%; transform: translate(-50%,-50%);border:none;background-color:transparent;font-weight: 600;color:white;width:10px;height:10px;z-index:1;}
 
 @media only screen and (max-width:380px){
     ::-webkit-scrollbar { 

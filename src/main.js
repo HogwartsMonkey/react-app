@@ -42,13 +42,13 @@ class Head extends React.Component{
                     </div> 
                     <div className="scroll-menu-warpper">  
                          <div className="paddle-left">
-                                <button className="button-left" onClick= {this.scrollLeft}></button>
+                                <button className="button-left" onClick= {this.scrollLeft}>&#x3c;</button>
                         </div>
                         <div className="horizontal-scroll">
                         <Scroll function={this.changeMainOffer}/>
                          </div>
                     <div className="paddle-right">
-                        <button className="button-right"onClick= {this.scrollRight} ></button>
+                        <button className="button-right"onClick= {this.scrollRight} >&#x3e;</button>
                     </div>
                      </div>
 

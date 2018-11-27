@@ -3,7 +3,7 @@ import brands from './brands.js';
 
 export default function scrollLeft(){
     let menuWidth =document.querySelector('.horizontal-scroll').getBoundingClientRect().width;
-    let itemWidth= document.querySelector('.item').getBoundingClientRect().width;
+    let itemWidth= document.querySelector('.item').getBoundingClientRect().width+20;
     let itemsInWindow = Math.round(menuWidth/(itemWidth+20));
     let itemsCount = brands.length;
     let maxClicks = itemsCount - itemsInWindow;
@@ -27,7 +27,7 @@ export default function scrollLeft(){
     })
     
 }
-    else if (this.state.clicksCounter < maxClicks){
+    else if (this.state.clicksCounter < maxClicks ){
         this.setState({scrollPosition: this.state.scrollPosition + itemWidth,clicksCounter: this.state.clicksCounter+1},function(){
             let desieredPosition = this.state.scrollPosition;
             
