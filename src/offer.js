@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import ReactDOM from 'react-dom';
 import brands from './brands.js';
 import {Outgoing} from './outgoing.js';
 import Video from './video.js';

@@ -2,21 +2,22 @@ import React from 'react';
 import Logo from './assets/logo.png';
 
 
-
 export default class Header extends React.Component{
     constructor(props){
         super(props);
-        this.state = {currentPosition: 1};
-        this.moveBar = this.moveBar.bind(this);
-        this.elementRef = React.createRef();
+        this.state = {previousPosition: 1, barStyle: this.props.barMenuStyle};
+        
     }
+   
+    componentDidUpdate(prevProps) {
+        if (prevProps.barMenuStyle !== this.props.barMenuStyle) {
+          this.setState({barStyle: this.props.barMenuStyle})
+        }
+        else {
+            return false;
+        }
+      }
 
-    moveBar(desieredPosition){
-        let element = this.elementRef.current;
-        let previousPosition = this.state.currentPosition;
-        console.log({element});
-           
-    }
 
 render(){
     return(
@@ -28,8 +29,8 @@ render(){
             </div>
         </div>
 
-        <div onClick={this.moveBar(2)} ref={this.elementRef}>
-            <h1>Best Casinos</h1>
+        <div onClick={this.props.changeBar}>
+            <h1>Best Casinos </h1>
             
         </div>
 
@@ -47,7 +48,7 @@ render(){
          <div className="row">
             <div className="col-1-2"></div>
             <div className="col-1-2">
-                <div className="bar"></div>
+                <div style={this.state.barStyle}></div>
             </div>
          </div>
 
