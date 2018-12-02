@@ -29,20 +29,20 @@ render(){
             </div>
         </div>
 
-        <div onClick={this.props.changeBar}>
+        <div onClick={()=>{this.props.changeBar(0)}}>
             <h1>Best Casinos </h1>
             
         </div>
 
-        <div>
+        <div onClick={()=>{this.props.changeBar(100)}}>
             <h1>Slots</h1>
         </div>
 
-         <div>
+         <div onClick={()=>{this.props.changeBar(200)}} >
             <h1>Roulette</h1>
          </div>
 
-         <div>
+         <div onClick={()=>{this.props.changeBar(300)}}>
              <h1>Sport</h1>
          </div>
          <div className="row">

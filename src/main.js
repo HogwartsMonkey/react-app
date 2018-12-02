@@ -10,6 +10,7 @@ import scrollLeft from './scroll-left.js';
 import scrollRight from './scroll-right.js';
 import Header from './header.js';
 
+
 let barStyles = {
     transform: 'translateX(0)',
     position:'absolute',
@@ -22,7 +23,7 @@ let barStyles = {
     transition: 'transform 0.1s linear'
 }
 
-
+ 
 
 class Head extends React.Component{
     constructor(props){
@@ -45,14 +46,14 @@ class Head extends React.Component{
     componentWillMount() {
         incoming.call(this);
     }
-   
-    moveBar(){
-        let x = '50%';
+
+    moveBar(to){
+        let x = to+'%';
         let statusCopy = Object.assign({}, this.state.barStyle);
         statusCopy.transform = 'translateX('+x+')';
         this.setState({barStyle :statusCopy});
     }
-     
+   
         render(){
         return ( 
                 <React.Fragment>
