@@ -50,6 +50,4 @@ export default class Reviews extends React.Component{
       }
 }
 
-class reviewKeyPoint extends React.Component{
 
-}
