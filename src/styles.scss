@@ -116,7 +116,8 @@ button:focus{outline:0;}
 #details {width:100%;position:relative;min-height:300px;overflow:hidden;float:left;background-color:white;color:black;}
 #details .review-keypoints {width:100%;height:auto;display:block;}
 #details .review-keypoints h2 {padding:10px; font-weight:500;display:block;text-align:center;}
+#details .review-keypoints .img-container {width:100%;}
 #details .review-keypoints .col-1-2 {width:calc((100%/3)*2)}
 #details .review-keypoints .col-2-2 {width:calc(100%/3)}
-#details .review-keypoints p {color:black;padding:10px;}
-#main-offer #details [class|=col] {display:block;height:150px;}
+#details .review-keypoints p {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:black;padding:10px;}
+#main-offer #details [class|=col] {display:block;height:50px;}

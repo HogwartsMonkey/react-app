@@ -33,7 +33,11 @@ export default class Reviews extends React.Component{
                     <div className="col-1-2">
                         <p>{brands[this.state.offervalue].keypoint3}</p>
                     </div>
-                    <div className="col-2-2"></div>
+                    <div className="col-2-2">
+                         <div className="img-container">
+                            <img className="img-responsive" src={brands[this.state.offervalue].keypoint3image}/>
+                        </div>
+                    </div>
                 </div>
                 <div className="col-1-4">
                     <div className="col-1-2">

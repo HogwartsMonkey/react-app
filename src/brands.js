@@ -13,9 +13,13 @@ const slotsHeaven = {
     cpa:'350',
     position: '1',
     keypoint1: 'Best Games',
+    keypoint1image:'',
     keypoint2:'Fair Offer',
+    keypoint2image:'',
     keypoint3:'Pay with PayPal',
-    keypoint4:'Exclusive Promotion'
+    keypoint3image:require('./assets/reviews-images/paypal.png'),
+    keypoint4:'Exclusive Promotion',
+    keypoint4image:''
 };  
 
 const playOjo = { 
