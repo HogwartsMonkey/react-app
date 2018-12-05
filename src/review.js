@@ -35,7 +35,9 @@ export default class Reviews extends React.Component{
                     </div>
                     <div className="col-2-2">
                          <div className="img-container">
+                            <div>
                             <img className="img-responsive" src={brands[this.state.offervalue].keypoint3image}/>
+                            </div>
                         </div>
                     </div>
                 </div>
