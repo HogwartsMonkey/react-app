@@ -10,7 +10,6 @@ export default class Offer extends React.Component{
     constructor(props){
         super(props);
         this.state = { offervalue: this.props.offervalue};
-        this.renderMainOffer = this.renderMainOffer.bind(this);
         
     }
 
@@ -27,9 +26,9 @@ export default class Offer extends React.Component{
         Outgoing(offerlink,cpa,position,page,icid);
     }
     
-   renderMainOffer(i){
 
-            return <mainOffer/>
+   renderMainImage(i){
+       return <mainImage offervalue={i}/>
    }
 
     render(){  
@@ -82,5 +81,14 @@ export default class Offer extends React.Component{
 
 
 
-
+class mainImage extends React.Component{
+    constructor(props){
+        super(props);
+    }
+    render(){
+        <div className="img-container">
+            <img className={this.state.offervalue == this.props.offervalue ? "img-responsive visible": "img-responsive hidden"} src={brands[this.props.offervalue].image}/>
+        </div>
+    }
+}
 
