@@ -13,6 +13,7 @@
     "html-webpack-plugin": "^4.0.0-beta.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-image-fade-in": "^1.0.2",
     "react-video": "^1.5.3",
     "style-loader": "^0.23.1",
     "webpack": "^4.23.1",

@@ -1,5 +1,7 @@
  import React from 'react';
  import brands from './brands.js';
+
+ const numbers = [0,1,2,3,4,5,6,7]
  
  export default class Scroll extends React.Component{
     constructor(props){
@@ -9,19 +11,19 @@
        return  <Item image={brands[i].image} changeMainOffer={this.props.function} id={i}/>
     }
 
+    renderItemList(arrayofNumbers){
+        
+        const listofItems = arrayofNumbers;
+        const allItems = listofItems.map((number)=>
+        this.renderItem(number)
+        )
+
+        return allItems
+    }
     render(){
     return (
         <React.Fragment>
-    
-            {this.renderItem(0)}
-            {this.renderItem(1)}
-            {this.renderItem(2)}
-            {this.renderItem(3)}
-            {this.renderItem(4)}
-            {this.renderItem(5)}
-            {this.renderItem(6)}
-            {this.renderItem(7)}
-       
+            {this.renderItemList(numbers)}
         </React.Fragment>
     );
     }
