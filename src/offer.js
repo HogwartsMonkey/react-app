@@ -1,10 +1,10 @@
-import React,{Component} from 'react';
+import React from 'react';
 import brands from './brands.js';
 import {Outgoing} from './outgoing.js';
 import Video from './video.js';
-import ImageFadeIn from 'react-image-fade-in';
 
-const numbers =[0,1,2,3,4,5,6,7];
+
+const numbers = [0,1,2,3,4,5,6,7]
 
 export default class Offer extends React.Component{
     constructor(props){
@@ -36,6 +36,7 @@ export default class Offer extends React.Component{
             <React.Fragment>
             <div className="col-1-3">
                 <div className="offer-image">
+                {this.renderMainImage(numbers[0])}
                     <div className="img-container">
                     <img className={this.state.offervalue == 0 ? "img-responsive visible": "img-responsive hidden"} src={brands[0].image}/>
                     </div>
@@ -81,14 +82,5 @@ export default class Offer extends React.Component{
 
 
 
-class mainImage extends React.Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
-        <div className="img-container">
-            <img className={this.state.offervalue == this.props.offervalue ? "img-responsive visible": "img-responsive hidden"} src={brands[this.props.offervalue].image}/>
-        </div>
-    }
-}
+
 

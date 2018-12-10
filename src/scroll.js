@@ -8,7 +8,7 @@
         super(props);
     }
     renderItem(i){
-       return  <Item image={brands[i].image} changeMainOffer={this.props.function} id={i}/>
+       return  <Item image={brands[i].image} changeMainOffer={this.props.function} id={i} key={i}/>
     }
 
     renderItemList(arrayofNumbers){

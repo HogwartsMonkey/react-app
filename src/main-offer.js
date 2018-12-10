@@ -3,7 +3,7 @@ import brands from './brands.js';
 import Video from './video.js';
 
 
-export default class mainOfferI extends React.Component{
+export default class mainOffer extends React.Component{
     constructor(props){
         super(props);
         this.state = {offervalue: this.props.offervalue}
