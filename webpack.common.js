@@ -9,9 +9,6 @@ module.exports =
       main: './src/main.js'
      
   },
-    devtool: 'inline-source-map',
-     mode: 'development',
-    devServer: {contentBase: './dist'},
     module: {
         rules: [
           {
