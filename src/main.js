@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
 import './styles.scss';
-import brands from './brands.js';
 import {incoming} from './incoming.js';
 import Offer from './offer.js';
 import Scroll from './scroll.js';

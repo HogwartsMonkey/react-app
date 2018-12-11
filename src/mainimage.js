@@ -6,8 +6,10 @@ export default class mainImage extends React.Component{
         super(props);
     }
     render(){
+     return   (
         <div className="img-container">
             <img className={this.state.offervalue == this.props.offervalue ? "img-responsive visible": "img-responsive hidden"} src={brands[this.props.offervalue].image}/>
         </div>
+        );
     }
 }

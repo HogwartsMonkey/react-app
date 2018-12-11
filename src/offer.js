@@ -10,6 +10,8 @@ export default class Offer extends React.Component{
     constructor(props){
         super(props);
         this.state = { offervalue: this.props.offervalue};
+        this.renderMainImage = this.renderMainImage.bind(this);
+        this.renderAllImages = this.renderAllImages.bind(this);
         
     }
 
@@ -27,40 +29,27 @@ export default class Offer extends React.Component{
     }
     
 
-   renderMainImage(i){
-       return <mainImage offervalue={i}/>
+   renderMainImage(i,currentoffervalue){
+       return <MainImage offervalue={i} currentoffervalue={currentoffervalue}/>
    }
+
+   renderAllImages(arrayofnumbers,offervalue){
+    const listofItems = arrayofnumbers;
+    const allItems = listofItems.map((number)=>
+    this.renderMainImage(number,offervalue)
+    )
+
+    return allItems
+}
+   
 
     render(){  
         return(
             <React.Fragment>
             <div className="col-1-3">
                 <div className="offer-image">
-                {this.renderMainImage(numbers[0])}
-                    <div className="img-container">
-                    <img className={this.state.offervalue == 0 ? "img-responsive visible": "img-responsive hidden"} src={brands[0].image}/>
-                    </div>
-                    <div className="img-container">
-                    <img className={this.state.offervalue == 1 ? "img-responsive visible": "img-responsive hidden"} src={brands[1].image}/>
-                    </div>
-                    <div className="img-container">
-                    <img className={this.state.offervalue == 2 ? "img-responsive visible": "img-responsive hidden"} src={brands[2].image}/>
-                    </div>
-                    <div className="img-container">
-                    <img className={this.state.offervalue == 3 ? "img-responsive visible": "img-responsive hidden"} src={brands[3].image}/>
-                    </div>
-                    <div className="img-container">
-                    <img className={this.state.offervalue == 4 ? "img-responsive visible": "img-responsive hidden"} src={brands[4].image}/>
-                    </div>
-                    <div className="img-container">
-                    <img className={this.state.offervalue == 5 ? "img-responsive visible": "img-responsive hidden"} src={brands[5].image}/>
-                    </div>
-                    <div className="img-container">
-                    <img className={this.state.offervalue == 6 ? "img-responsive visible": "img-responsive hidden"} src={brands[6].image}/>
-                    </div>
-                    <div className="img-container">
-                    <img className={this.state.offervalue == 7 ? "img-responsive visible": "img-responsive hidden"} src={brands[7].image}/>
-                    </div>
+                {this.renderAllImages(numbers,this.state.offervalue)}
+                    
                 </div>
                 <div className="offer-text">
                     <p>{brands[this.state.offervalue].offerBonus1}</p> 
@@ -75,11 +64,25 @@ export default class Offer extends React.Component{
             </div>
             <div className="col-2-3">
             <Video className="video-container" videoId={brands[this.state.offervalue].videoId}/>
+            
             </div>
             </React.Fragment>);     
     }
 }
 
+ class MainImage extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {offervalue : this.props.offervalue}
+    }
+    render(){
+     return   (
+        <div className="img-container">
+            <img className={this.state.offervalue == this.props.currentoffervalue ? "img-responsive visible": "img-responsive hidden"} src={brands[this.props.offervalue].image}/>
+        </div>
+        );
+    }
+}
 
 
 
