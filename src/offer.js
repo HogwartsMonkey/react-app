@@ -29,8 +29,8 @@ export default class Offer extends React.Component{
     }
     
 
-   renderMainImage(i,currentoffervalue){
-       return <MainImage offervalue={i} currentoffervalue={currentoffervalue}/>
+   renderMainImage(locationinArray,currentoffervalue){
+       return <MainImage offervalue={locationinArray} currentoffervalue={currentoffervalue} key={locationinArray}/>
    }
 
    renderAllImages(arrayofnumbers,offervalue){
@@ -70,10 +70,10 @@ export default class Offer extends React.Component{
     }
 }
 
- class MainImage extends React.Component{
+class MainImage extends React.Component{
     constructor(props){
         super(props);
-        this.state = {offervalue : this.props.offervalue}
+        this.state = { offervalue: this.props.offervalue}
     }
     render(){
      return   (
