@@ -4,8 +4,9 @@ import brands from './brands.js'
 export default class Reviews extends React.Component{
     constructor(props){
         super(props);
-        this.state = { offervalue: this.props.offervalue }
+        this.state = { offervalue: this.props.offervalue
     }
+}
 
     componentDidUpdate(prevProps) {
         if (prevProps.offervalue !== this.props.offervalue) {
@@ -45,7 +46,12 @@ export default class Reviews extends React.Component{
                     <div className="col-1-2">
                         <p>{brands[this.state.offervalue].keypoint4}</p>
                     </div>
-                    <div className="col-2-2"></div>
+                    <div className="col-2-2">
+                        <div style={this.props.barContainer}>
+                        <div style={this.props.barProgress}></div>
+                        </div>
+                       
+                    </div>
                 </div>
           </div>
           );

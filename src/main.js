@@ -8,6 +8,7 @@ import Reviews from './review.js';
 import scrollLeft from './scroll-left.js';
 import scrollRight from './scroll-right.js';
 import Header from './header.js';
+import { isAbsolute } from 'path';
 
 
 let barStyles = {
@@ -22,12 +23,36 @@ let barStyles = {
     transition: 'transform 0.1s linear'
 }
 
- 
+let barContainer = {
+    width: '100%',
+    height: 10,
+    border:'1px solid green',
+    position:'absolute',
+    top:'50%',
+    transform: 'translateY(-50%)'
+}
+
+let barProgress = {
+    width: '10%',
+    height: '100%',
+    backgroundColor:'green'
+}
+
 
 class Head extends React.Component{
     constructor(props){
         super(props);
-        this.state = {mainOffer: 0, icid: 54, scrollPosition: 0, menuSize: 0, clicksCounter :0, barStyle : this.props.styles }
+        this.state = {
+            mainOffer: 0,
+             icid: 54, 
+             scrollPosition: 0, 
+             menuSize: 0, 
+             clicksCounter :0, 
+             barStyle : this.props.styles,
+             barContainer: this.props.barContainer,
+             barProgress: this.props.barProgress
+        }
+          
         this.changeMainOffer = this.changeMainOffer.bind(this);
         this.scrollLeft = scrollLeft.bind(this);
         this.scrollRight = scrollRight.bind(this);
@@ -42,7 +67,7 @@ class Head extends React.Component{
         return <Offer offervalue ={j}  icid={this.state.icid}/>
     }
 
-    componentWillMount() {
+    componentDidMount() {
         incoming.call(this);
     }
 
@@ -52,6 +77,8 @@ class Head extends React.Component{
         statusCopy.transform = 'translateX('+x+')';
         this.setState({barStyle :statusCopy});
     }
+
+    
    
         render(){
         return ( 
@@ -74,7 +101,7 @@ class Head extends React.Component{
                      </div>
 
                     <div id="details">
-                    <Reviews offervalue={this.state.mainOffer}/>
+                    <Reviews offervalue={this.state.mainOffer} barContainer={this.state.barContainer} barProgress={this.state.barProgress}/>
                     </div>
                         
                 </React.Fragment>
@@ -84,4 +111,4 @@ class Head extends React.Component{
 
 
 
-ReactDOM.render(<Head styles={barStyles}/>,document.getElementById('main-offer'));
+ReactDOM.render(<Head styles={barStyles} barContainer={barContainer} barProgress={barProgress}/>,document.getElementById('main-offer'));
