@@ -35,6 +35,7 @@
         super(props);
         this.state = {image: this.props.image}
     }
+
     
     render(){
         return(

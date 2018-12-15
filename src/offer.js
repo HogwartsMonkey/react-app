@@ -42,7 +42,6 @@ export default class Offer extends React.Component{
     return allItems
 }
    
-
     render(){  
         return(
             <React.Fragment>

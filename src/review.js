@@ -4,7 +4,8 @@ import brands from './brands.js'
 export default class Reviews extends React.Component{
     constructor(props){
         super(props);
-        this.state = { offervalue: this.props.offervalue
+        this.state = { offervalue: this.props.offervalue,
+            changeBarWidth: this.props.changeBarWidth
     }
 }
 
@@ -20,36 +21,44 @@ export default class Reviews extends React.Component{
               <h2> What we like most about {brands[this.state.offervalue].name}</h2>
                 <div className="col-1-4">
                     <div className="col-1-2">
-                        <p>{brands[this.state.offervalue].keypoint1}</p>
-                    </div>
-                    <div className="col-2-2"></div>
-                </div>
-                <div className="col-1-4">
-                    <div className="col-1-2">
-                        <p>{brands[this.state.offervalue].keypoint2}</p>
-                    </div>
-                    <div className="col-2-2"></div>
-                </div>
-                <div className="col-1-4">
-                    <div className="col-1-2">
-                        <p>{brands[this.state.offervalue].keypoint3}</p>
+                        <p>Overall Score</p>
                     </div>
                     <div className="col-2-2">
-                         <div className="img-container">
-                            <div>
-                            <img className="img-responsive" src={brands[this.state.offervalue].keypoint3image}/>
-                            </div>
-                        </div>
+                    <div style={this.props.barContainer}>
+                            <div style={brands[this.state.offervalue].barProgress1}></div>     
+                         </div>
+                    </div>
+                    
+                </div>
+                <div className="col-1-4">
+                    <div className="col-1-2">
+                        <p>Gaming Experience</p>
+                    </div>
+                    <div className="col-2-2">
+                    <div style={this.props.barContainer}>
+                            <div id="progress-bar" style={brands[this.state.offervalue].barProgress2}></div>     
+                         </div>
+                    
                     </div>
                 </div>
                 <div className="col-1-4">
                     <div className="col-1-2">
-                        <p>{brands[this.state.offervalue].keypoint4}</p>
+                        <p>Support and Cashouts</p>
+                    </div>
+                    <div className="col-2-2">
+                    <div id="progress-bar" style={this.props.barContainer}>
+                            <div id="progress-bar" style={brands[this.state.offervalue].barProgress3}></div>     
+                         </div>
+                    </div>
+                </div>
+                <div className="col-1-4">
+                    <div className="col-1-2">
+                        <p>Games Selection</p>
                     </div>
                     <div className="col-2-2">
                         <div style={this.props.barContainer}>
-                        <div style={this.props.barProgress}></div>
-                        </div>
+                            <div id="progress-bar" style={brands[this.state.offervalue].barProgress4}></div>     
+                         </div>
                        
                     </div>
                 </div>

@@ -26,16 +26,10 @@ let barStyles = {
 let barContainer = {
     width: '100%',
     height: 10,
-    border:'1px solid green',
+    border:'1px solid #79a5c6',
     position:'absolute',
     top:'50%',
     transform: 'translateY(-50%)'
-}
-
-let barProgress = {
-    width: '10%',
-    height: '100%',
-    backgroundColor:'green'
 }
 
 
@@ -49,14 +43,14 @@ class Head extends React.Component{
              menuSize: 0, 
              clicksCounter :0, 
              barStyle : this.props.styles,
-             barContainer: this.props.barContainer,
-             barProgress: this.props.barProgress
+             barContainer: this.props.barContainer
         }
           
         this.changeMainOffer = this.changeMainOffer.bind(this);
         this.scrollLeft = scrollLeft.bind(this);
         this.scrollRight = scrollRight.bind(this);
         this.moveBar = this.moveBar.bind(this);
+       
     }
 
     changeMainOffer(id){
@@ -73,10 +67,12 @@ class Head extends React.Component{
 
     moveBar(to){
         let x = to+'%';
-        let statusCopy = Object.assign({}, this.state.barStyle);
-        statusCopy.transform = 'translateX('+x+')';
-        this.setState({barStyle :statusCopy});
+        let styleCopy = Object.assign({}, this.state.barStyle);
+        styleCopy.transform = 'translateX('+x+')';
+        this.setState({barStyle :styleCopy});
     }
+
+    
 
     
    
@@ -93,7 +89,7 @@ class Head extends React.Component{
                                 <button className="button-left" onClick={this.scrollRight}>&#x3c;</button>
                         </div>
                         <div className="horizontal-scroll">
-                        <Scroll function={this.changeMainOffer}/>
+                        <Scroll function={this.changeMainOffer} changeBarWidth={this.changeBarWidth}/>
                          </div>
                     <div className="paddle-right">
                         <button className="button-right"onClick= {this.scrollLeft} >&#x3e;</button>
@@ -101,7 +97,7 @@ class Head extends React.Component{
                      </div>
 
                     <div id="details">
-                    <Reviews offervalue={this.state.mainOffer} barContainer={this.state.barContainer} barProgress={this.state.barProgress}/>
+                    <Reviews offervalue={this.state.mainOffer} barContainer={this.state.barContainer}/>
                     </div>
                         
                 </React.Fragment>
@@ -111,4 +107,4 @@ class Head extends React.Component{
 
 
 
-ReactDOM.render(<Head styles={barStyles} barContainer={barContainer} barProgress={barProgress}/>,document.getElementById('main-offer'));
+ReactDOM.render(<Head styles={barStyles} barContainer={barContainer}/>,document.getElementById('main-offer'));
