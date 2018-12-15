@@ -23,25 +23,25 @@ const slotsHeaven = {
     barProgress1 : {
         width: '98%',
         height: '100%',
-        backgroundColor:'#4b99f6',
+        backgroundColor:'rgb(195, 223, 209)',
         transition: 'width 0.2s linear'
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
-        backgroundColor:'#4b99f6',
+        backgroundColor:'rgb(195, 223, 209)',
         transition: 'width 0.2s linear'
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
-        backgroundColor:'#4b99f6',
+        backgroundColor:'rgb(195, 223, 209)',
         transition: 'width 0.2s linear'
     },
     barProgress4 : {
         width: '80%',
         height: '100%',
-        backgroundColor:'#4b99f6',
+        backgroundColor:'rgb(195, 223, 209)',
         transition: 'width 0.2s linear'
     }
 };  
@@ -57,27 +57,27 @@ const playOjo = {
     cpa:'350',
     position: '2',
     barProgress1 : {
-        width: '90%',
+        width: '87%',
         height: '100%',
-        backgroundColor:'#4b99f6',
+        backgroundColor:'rgb(195, 223, 209)',
         transition: 'width 0.2s linear'
     },
     barProgress2 : {
         width: '80%',
         height: '100%',
-        backgroundColor:'#4b99f6',
+        backgroundColor:'rgb(195, 223, 209)',
         transition: 'width 0.2s linear'
     }
     ,barProgress3 : {
-        width: '95%',
+        width: '90%',
         height: '100%',
-        backgroundColor:'#4b99f6',
+        backgroundColor:'rgb(195, 223, 209)',
         transition: 'width 0.2s linear'
     },
     barProgress4 : {
         width: '85%',
         height: '100%',
-        backgroundColor:'#4b99f6',
+        backgroundColor:'rgb(195, 223, 209)',
         transition: 'width 0.2s linear'
     }
 };  
