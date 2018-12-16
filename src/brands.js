@@ -23,25 +23,25 @@ const slotsHeaven = {
     barProgress1 : {
         width: '98%',
         height: '100%',
-        backgroundColor:'rgb(195, 223, 209)',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
         transition: 'width 0.2s linear'
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
-        backgroundColor:'rgb(195, 223, 209)',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
         transition: 'width 0.2s linear'
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
-        backgroundColor:'rgb(195, 223, 209)',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
         transition: 'width 0.2s linear'
     },
     barProgress4 : {
         width: '80%',
         height: '100%',
-        backgroundColor:'rgb(195, 223, 209)',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
         transition: 'width 0.2s linear'
     }
 };  
@@ -59,25 +59,25 @@ const playOjo = {
     barProgress1 : {
         width: '87%',
         height: '100%',
-        backgroundColor:'rgb(195, 223, 209)',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
         transition: 'width 0.2s linear'
     },
     barProgress2 : {
         width: '80%',
         height: '100%',
-        backgroundColor:'rgb(195, 223, 209)',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
         transition: 'width 0.2s linear'
     }
     ,barProgress3 : {
         width: '90%',
         height: '100%',
-        backgroundColor:'rgb(195, 223, 209)',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
         transition: 'width 0.2s linear'
     },
     barProgress4 : {
         width: '85%',
         height: '100%',
-        backgroundColor:'rgb(195, 223, 209)',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
         transition: 'width 0.2s linear'
     }
 };  
@@ -91,7 +91,31 @@ const karamba = {
     videoId: 'io-f1TanwmU',
     offerlink: '33',
     cpa:'300',
-    position: '3'
+    position: '3',
+    barProgress1 : {
+        width: '92%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress2 : {
+        width: '90%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
+    ,barProgress3 : {
+        width: '100%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress4 : {
+        width: '70%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
 };  
 
 const Casino888 = { 
@@ -103,7 +127,31 @@ const Casino888 = {
     videoId: '251H0IDGJAQ',
     offerlink: '17',
     cpa:'450',
-    position: '4'
+    position: '4',
+    barProgress1 : {
+        width: '87%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress2 : {
+        width: '85%',
+        height: '90%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
+    ,barProgress3 : {
+        width: '100%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress4 : {
+        width: '75%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
 }; 
 
 const mansionCasino = { 
@@ -115,7 +163,31 @@ const mansionCasino = {
     videoId: '251H0IDGJAQ',
     offerlink: '19',
     cpa:'500',
-    position: '5'
+    position: '5',
+    barProgress1 : {
+        width: '85%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress2 : {
+        width: '90%',
+        height: '85%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
+    ,barProgress3 : {
+        width: '100%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress4 : {
+        width: '70%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
 }; 
 
 const sloty = { 
@@ -127,7 +199,31 @@ const sloty = {
     videoId: '251H0IDGJAQ',
     offerlink: '35',
     cpa:'280',
-    position: '6'
+    position: '6',
+    barProgress1 : {
+        width: '90%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress2 : {
+        width: '90%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
+    ,barProgress3 : {
+        width: '80%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress4 : {
+        width: '80%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
 }; 
 
 const royalPanda = { 
@@ -139,7 +235,31 @@ const royalPanda = {
     videoId: '251H0IDGJAQ',
     offerlink: '22',
     cpa:'350',
-    position: '7'
+    position: '7',
+    barProgress1 : {
+        width: '80%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress2 : {
+        width: '80%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
+    ,barProgress3 : {
+        width: '80%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress4 : {
+        width: '80%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
 }; 
 
 const casinoOfDreams = { 
@@ -151,7 +271,31 @@ const casinoOfDreams = {
     videoId: '251H0IDGJAQ',
     offerlink: '26',
     cpa:'300',
-    position: '8'
+    position: '8',
+    barProgress1 : {
+        width: '75%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress2 : {
+        width: '80%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
+    ,barProgress3 : {
+        width: '70%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    },
+    barProgress4 : {
+        width: '75%',
+        height: '100%',
+        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
+        transition: 'width 0.2s linear'
+    }
 }; 
  
 brands.push(slotsHeaven);
