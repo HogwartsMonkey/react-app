@@ -26,7 +26,7 @@ let barStyles = {
 let barContainer = {
     width: '100%',
     height: 15,
-    border:'1px solid #79a5c6',
+    border:'2px solid rgb(197, 208, 216)',
     borderRadius: '2px 2px',
     position:'absolute',
     top:'50%',
