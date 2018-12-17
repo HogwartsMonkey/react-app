@@ -9,7 +9,10 @@ const numbers = [0,1,2,3,4,5,6,7]
 export default class Offer extends React.Component{
     constructor(props){
         super(props);
-        this.state = { offervalue: this.props.offervalue};
+        this.state = { 
+            offervalue: this.props.offervalue,
+            brands: brands
+        };
         this.renderMainImage = this.renderMainImage.bind(this);
         this.renderAllImages = this.renderAllImages.bind(this);
         

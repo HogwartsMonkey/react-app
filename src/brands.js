@@ -15,7 +15,7 @@ const slotsHeaven = {
     keypoint1: 'Best Games',
     keypoint1image:'',
     keypoint2:'Fair Offer',
-    keypoint2image:'',
+    keypoint2image:require('./assets/reviews-images/diamond.png'),
     keypoint3:'Pay with PayPal',
     keypoint3image:require('./assets/reviews-images/paypal.png'),
     keypoint4:'Exclusive Promotion',
@@ -24,25 +24,25 @@ const slotsHeaven = {
         width: '98%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress4 : {
         width: '80%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
 };  
 
@@ -60,25 +60,25 @@ const playOjo = {
         width: '87%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress2 : {
         width: '80%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
     ,barProgress3 : {
         width: '90%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress4 : {
         width: '85%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
 };  
 
@@ -96,25 +96,25 @@ const karamba = {
         width: '92%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress4 : {
         width: '70%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
 };  
 
@@ -132,25 +132,25 @@ const Casino888 = {
         width: '87%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress2 : {
         width: '85%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress4 : {
         width: '75%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
 }; 
 
@@ -168,25 +168,25 @@ const mansionCasino = {
         width: '85%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress4 : {
         width: '70%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
 }; 
 
@@ -204,25 +204,25 @@ const sloty = {
         width: '90%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
     ,barProgress3 : {
         width: '80%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress4 : {
         width: '80%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
 }; 
 
@@ -240,25 +240,25 @@ const royalPanda = {
         width: '80%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress2 : {
         width: '80%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
     ,barProgress3 : {
         width: '80%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress4 : {
         width: '80%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
 }; 
 
@@ -276,25 +276,25 @@ const casinoOfDreams = {
         width: '75%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress2 : {
         width: '80%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
     ,barProgress3 : {
         width: '70%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     },
     barProgress4 : {
         width: '75%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.3s linear'
+        transition: 'width 0.1s linear'
     }
 }; 
  

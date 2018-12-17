@@ -9,6 +9,7 @@ import scrollLeft from './scroll-left.js';
 import scrollRight from './scroll-right.js';
 import Header from './header.js';
 import { isAbsolute } from 'path';
+import brands from './brands.js';
 
 
 let barStyles = {
@@ -44,7 +45,8 @@ class Head extends React.Component{
              menuSize: 0, 
              clicksCounter :0, 
              barStyle : this.props.styles,
-             barContainer: this.props.barContainer
+             barContainer: this.props.barContainer,
+             Brands: this.props.brands
         }
           
         this.changeMainOffer = this.changeMainOffer.bind(this);
@@ -59,7 +61,7 @@ class Head extends React.Component{
     }
 
     renderMainOffer(j){
-        return <Offer offervalue ={j}  icid={this.state.icid}/>
+        return <Offer offervalue ={j}  icid={this.state.icid} Brands={this.state.brands}/>
     }
 
     componentDidMount() {
@@ -107,4 +109,4 @@ class Head extends React.Component{
 }
 
 
-ReactDOM.render(<Head styles={barStyles} barContainer={barContainer}/>,document.getElementById('main-offer'));
+ReactDOM.render(<Head styles={barStyles} barContainer={barContainer} brands={brands}/>,document.getElementById('main-offer'));
