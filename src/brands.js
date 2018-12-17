@@ -136,7 +136,7 @@ const Casino888 = {
     },
     barProgress2 : {
         width: '85%',
-        height: '90%',
+        height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
         transition: 'width 0.3s linear'
     }

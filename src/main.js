@@ -24,7 +24,7 @@ let barStyles = {
 }
 
 let barContainer = {
-    width: '100%',
+    width: '90%',
     height: 15,
     border:'2px solid rgb(197, 208, 216)',
     borderRadius: '2px 2px',
@@ -105,7 +105,6 @@ class Head extends React.Component{
         );
      }
 }
-
 
 
 ReactDOM.render(<Head styles={barStyles} barContainer={barContainer}/>,document.getElementById('main-offer'));
