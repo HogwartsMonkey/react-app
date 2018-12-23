@@ -77,8 +77,8 @@ class UniqueFeatures extends React.Component {
 
 render(){
     return (
-        <div id="features" style={{width:'100%',height: 100, backgroundColor: 'white',border:'1px solid #999393',position:'relative'}}>
-            <div style={{position:'absolute',left:'50%',transform:'translateX(-50%)',height:100}}>
+        <div id="features" style={{width:'100%',height: 100, backgroundColor: 'white',border:'2px solid rgb(230, 229, 229)',position:'relative'}}>
+            <div style={{width:'80%',position:'absolute',left:'50%',transform:'translateX(-50%)',height:100}}>
             <div style={{width:100,height:100,display:'inline-block',float:'left',position:'relative'}}>
                 <div className="img-container">
                 <img className="img-responsive" src={brands[this.props.offervalue].keypoint3image}/>

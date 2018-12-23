@@ -15,4 +15,5 @@ export let barStyles = {
     let statusCopy = Object.assign({}, this.state.barStyle);
     statusCopy.transform = 'translateX('+x+')';
     this.setState({barStyle :statusCopy});
+    
 }
