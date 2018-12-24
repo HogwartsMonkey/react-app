@@ -23,26 +23,30 @@ const slotsHeaven = {
     barProgress1 : {
         width: '98%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress4 : {
         width: '80%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
 };  
 
@@ -59,26 +63,30 @@ const playOjo = {
     barProgress1 : {
         width: '87%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress2 : {
         width: '80%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
     ,barProgress3 : {
         width: '90%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress4 : {
         width: '85%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
 };  
 
@@ -95,26 +103,30 @@ const karamba = {
     barProgress1 : {
         width: '92%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress4 : {
         width: '70%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
 };  
 
@@ -131,26 +143,30 @@ const Casino888 = {
     barProgress1 : {
         width: '87%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress2 : {
         width: '85%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress4 : {
         width: '75%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
 }; 
 
@@ -167,26 +183,30 @@ const mansionCasino = {
     barProgress1 : {
         width: '85%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
     ,barProgress3 : {
         width: '100%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress4 : {
         width: '70%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
 }; 
 
@@ -203,26 +223,30 @@ const sloty = {
     barProgress1 : {
         width: '90%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress2 : {
         width: '90%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
     ,barProgress3 : {
         width: '80%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress4 : {
         width: '80%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
 }; 
 
@@ -239,26 +263,30 @@ const royalPanda = {
     barProgress1 : {
         width: '80%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress2 : {
         width: '80%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
     ,barProgress3 : {
         width: '80%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress4 : {
         width: '80%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
 }; 
 
@@ -275,26 +303,30 @@ const casinoOfDreams = {
     barProgress1 : {
         width: '75%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress2 : {
         width: '80%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
     ,barProgress3 : {
         width: '70%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     },
     barProgress4 : {
         width: '75%',
         height: '100%',
-        backgroundImage:'-webkit-linear-gradient(left, rgb(168, 235, 226) 21%, rgb(160, 219, 211) 65%, rgb(128, 179, 167) 100%)',
-        transition: 'width 0.1s linear'
+        backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
+        transition: 'width 0.1s linear',
+        borderRadius: 5
     }
 }; 
  

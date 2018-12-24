@@ -27,11 +27,11 @@ let barStyles = {
 let barContainer = {
     width: '90%',
     height: 15,
-    border:'2px solid rgb(197, 208, 216)',
-    borderRadius: '2px 2px',
+    borderRadius: '5px',
     position:'absolute',
     top:'50%',
-    transform: 'translateY(-50%)'
+    transform: 'translateY(-50%)',
+    backgroundColor: 'rgb(197, 208, 216)'
 }
 
 

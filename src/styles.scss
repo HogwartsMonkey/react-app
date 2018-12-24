@@ -116,11 +116,11 @@ button:focus{outline:0;}
 
 #details {width:100%;position:relative;min-height:300px;overflow:hidden;float:left;background-color:white;color:black;}
 #details .review-keypoints {width:auto;height:auto;display:block;}
-#details .review-keypoints h2 {padding:10px; font-weight:500;display:block;color:black;text-align:center;background-color: #d5d5d5;}
+#details .review-keypoints h2 {padding:10px; font-weight:500;display:block;color:#3a3737;text-align:center;background-color:white;}
 #details .review-keypoints .img-container {width:100%;height:auto;}
 #details .review-keypoints .col-2-2 {width:60%}
 #details .review-keypoints .col-1-2 {width:40%}
-#details .review-keypoints p {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:black;padding:10px;}
+#details .review-keypoints p {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#3a3737;padding:10px;}
 #main-offer #details [class|=col] {height:50px;}
 #main-offer #details .review-keypoints .col-1-4:nth-child(4){float:none;}
 @media only screen and (max-width:1024px) and (min-width:768px){
