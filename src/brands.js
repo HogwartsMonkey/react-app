@@ -14,10 +14,10 @@ const slotsHeaven = {
     position: '1',
     keypoint1: 'Best Games',
     keypoint1image:'',
-    keypoint2:'Fair Offer',
-    keypoint2image:require('./assets/reviews-images/diamond.png'),
-    keypoint3:'Pay with PayPal',
-    keypoint3image:require('./assets/reviews-images/paypal.png'),
+    keypoint2:'Pay with PayPal',
+    keypoint2image:require('./assets/reviews-images/paypal.png'),
+    keypoint3:'Exclusive Promotion',
+    keypoint3image:require('./assets/reviews-images/diamond.png'),
     keypoint4:'Exclusive Promotion',
     keypoint4image:'',
     barProgress1 : {
@@ -60,6 +60,8 @@ const playOjo = {
     offerlink: '53',
     cpa:'350',
     position: '2',
+    keypoint2image:require('./assets/reviews-images/jackpot.png'),
+
     barProgress1 : {
         width: '87%',
         height: '100%',
@@ -82,7 +84,7 @@ const playOjo = {
         borderRadius: 5
     },
     barProgress4 : {
-        width: '85%',
+        width: '65%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
         transition: 'width 0.1s linear',
@@ -162,7 +164,7 @@ const Casino888 = {
         borderRadius: 5
     },
     barProgress4 : {
-        width: '75%',
+        width: '60%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
         transition: 'width 0.1s linear',
@@ -195,7 +197,7 @@ const mansionCasino = {
         borderRadius: 5
     }
     ,barProgress3 : {
-        width: '100%',
+        width: '90%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
         transition: 'width 0.1s linear',
@@ -315,7 +317,7 @@ const casinoOfDreams = {
         borderRadius: 5
     }
     ,barProgress3 : {
-        width: '70%',
+        width: '50%',
         height: '100%',
         backgroundImage:'-webkit-linear-gradient(left, #FF9800 21%, rgb(222, 161, 86) 65%, rgb(245, 231, 131) 100%)',
         transition: 'width 0.1s linear',

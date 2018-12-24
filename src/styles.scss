@@ -117,7 +117,12 @@ button:focus{outline:0;}
 #details {width:100%;position:relative;min-height:300px;overflow:hidden;float:left;background-color:white;color:black;}
 #details .review-keypoints {width:auto;height:auto;display:block;}
 #details .review-keypoints h2 {padding:10px; font-weight:500;display:block;color:#3a3737;text-align:center;background-color:white;}
-#details .review-keypoints .img-container {width:100%;height:auto;}
+#details #features  { width: 100%;height: 100px;background-color: white;border: 1px solid rgb(230, 229, 229);position: relative}
+#details #features .features-container{width:50%;position:absolute;left:50%;transform:translateX(-50%);height:100px;white-space:nowrap}
+#details .review-keypoints .features-container .feature-img-container{width:25%;height:100%;display:inline-block;float:left;position:relative;}
+#details .review-keypoints .features-container .feature-img-container .feature-content {height:20;bottom:0;position:absolute;width:100%;}
+#details .review-keypoints .features-container .feature-img-container .feature-content p{color:#888381;padding:0;font-size:12;left:50%;top:50%;transform: translate(-50%,-50%)}
+#details .review-keypoints .img-container {max-width:60;height:auto;}
 #details .review-keypoints .col-2-2 {width:60%}
 #details .review-keypoints .col-1-2 {width:40%}
 #details .review-keypoints p {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);color:#3a3737;padding:10px;}
@@ -130,10 +135,15 @@ button:focus{outline:0;}
     #details .review-keypoints .col-1-4{width:90%;left:50%;transform:translateX(-50%);display:block;float:none;}
     #details .review-keypoints p {left:0;transform:translate(0,-50%);padding:0;text-align:left;}
     #details .review-keypoints .col-1-2 {width:50%;}
-#details .review-keypoints .col-2-2 {width:50%;}
+    #details .review-keypoints .col-2-2 {width:50%;}
+    #details #features .features-container{width:100%}
 }
+
+@media only screen and (max-width:411px){
+    #details .review-keypoints .features-container .feature-img-container{width:50%;}
+    }
+    
 
 .hidden {opacity: 0; transition: opacity 0.2s linear;}
 .visible {opacity:1 ; transition: opacity 0.2s linear;}
 
-//#details #features .img-container {width: 10%;}

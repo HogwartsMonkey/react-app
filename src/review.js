@@ -130,18 +130,31 @@ renderAllFeatureImages(arrayofnumbers,offervalue,keypoint){
 
 render(){
     return (
-        <div id="features" style={{width:'100%',height: 100, backgroundColor: 'white',border:'1px solid rgb(230, 229, 229)',position:'relative'}}>
-            <div style={{width:'80%',position:'absolute',left:'50%',transform:'translateX(-50%)',height:100}}>
-            <div style={{width:100,height:100,display:'inline-block',float:'left',position:'relative'}}>
-                 {this.renderAllFeatureImages(numbers,this.state.offervalue,3)}
-            </div>
-            <div style={{width:100,height:100,display:'inline-block',float:'left',position:'relative'}}>
-                <div className="img-container">
-                    {this.renderAllFeatureImages(numbers,this.state.offervalue,2)}
+        <div id="features">
+            <div className="features-container">
+
+            <div className="feature-img-container">
+                 <div className="feature-content"> 
+
+                    <p>{brands[this.state.offervalue].keypoint2}</p>
+
                 </div>
+              
+                 {this.renderAllFeatureImages(numbers,this.state.offervalue,2)}
+                
+            </div>
+
+            <div className="feature-img-container">
+                <div className="feature-content"> 
+                     <p>{brands[this.state.offervalue].keypoint3}</p>
+
+                </div>
+
+                 {this.renderAllFeatureImages(numbers,this.state.offervalue,3)}
+
              </div>
         </div>
-        </div>
+    </div>
     );
 }
 
@@ -153,8 +166,6 @@ class FeatureImage extends React.Component {
         super(props);
         this.state = {offervalue: this.props.offervalue, src:this.props.src}
     }
-
-    
 
     render(){
         return(
