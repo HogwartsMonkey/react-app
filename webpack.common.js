@@ -41,12 +41,24 @@ module.exports =
       },
     plugins : [
         new CleanWebpackPlugin('dist'),
-        new HtmlWebpackPlugin({title:'development',template:'./src/index.html'}),
+        new HtmlWebpackPlugin({title:'Caching',template:'./src/index.html'}),
         new ExtractTextPlugin("styles.css")
     ],
     output: {
-        filename: '[name].js',
+        filename: '[name].[contenthash].js',
         path: path.resolve(__dirname,'dist')
+    },
+    optimization:{
+      runtimeChunk: 'single',
+      splitChunks: {
+               cacheGroups: {
+                 vendor: {
+                   test: /[\\/]node_modules[\\/]/,
+                  name: 'vendors',
+                   chunks: 'all'
+                 }
+               }
+             }
     },
     externals: {
       jquery: 'jQuery'

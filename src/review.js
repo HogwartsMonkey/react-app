@@ -77,8 +77,8 @@ class UniqueFeatures extends React.Component {
     constructor(props){
     super(props);
     this.state = {offervalue : this.props.offervalue}
-    this.renderFeatureImage = this.renderFeatureImage.bind(this);
-    this.renderAllFeatureImages = this.renderAllFeatureImages.bind(this);
+    this.renderFeatureImageAndContent = this.renderFeatureImageAndContent.bind(this);
+    this.renderAllFeatureImagesAndContent = this.renderAllFeatureImagesAndContent.bind(this);
 }
 
 componentDidUpdate(prevProps) {
@@ -90,40 +90,48 @@ componentDidUpdate(prevProps) {
     }
   }
 
-renderFeatureImage(locationinArray,currentoffervalue,src){
-    return <FeatureImage offervalue={locationinArray} src={src} currentoffervalue={currentoffervalue} key={locationinArray}/>
+renderFeatureImageAndContent(locationinArray,currentoffervalue,src,p){
+    return <FeatureImageAndContent  offervalue={locationinArray} src={src} paragraphtext={p} currentoffervalue={currentoffervalue} key={locationinArray}/>
 }
 
-renderAllFeatureImages(arrayofnumbers,offervalue,keypoint){
+renderAllFeatureImagesAndContent(arrayofnumbers,offervalue,keypoint){
     let src =[];
+    let paragraphtext = []
     let i;
 
      if (keypoint == 1) {
          for(i=0;i<=7;i++){
          src.push(brands[i].keypoint1image)
+         paragraphtext.push(brands[i].keypoint1)
         }
     }
      if  (keypoint == 2) {
             for(i=0;i<=7;i++){
             src.push(brands[i].keypoint2image)
+            paragraphtext.push(brands[i].keypoint2)
+
            }
         }
 
     if (keypoint == 3) {
             for(i=0;i<=7;i++){
             src.push(brands[i].keypoint3image)
+            paragraphtext.push(brands[i].keypoint3)
+
            }
     }
     else {
         for(i=0;i<=7;i++){
         src.push(brands[i].keypoint4image)
+        paragraphtext.push(brands[i].keypoint4)
+
        }
     }
 
     let j = 0
     const listofItems = arrayofnumbers;
     const allItems = listofItems.map((number,index)=>
-    this.renderFeatureImage(number,offervalue,src[index])
+    this.renderFeatureImageAndContent(number,offervalue,src[index],paragraphtext[index])
     )
     return allItems
 }
@@ -134,23 +142,13 @@ render(){
             <div className="features-container">
 
             <div className="feature-img-container">
-                 <div className="feature-content"> 
-
-                    <p>{brands[this.state.offervalue].keypoint2}</p>
-
-                </div>
-              
-                 {this.renderAllFeatureImages(numbers,this.state.offervalue,2)}
-                
+               
+                 {this.renderAllFeatureImagesAndContent(numbers,this.state.offervalue,2)}  
             </div>
 
             <div className="feature-img-container">
-                <div className="feature-content"> 
-                     <p>{brands[this.state.offervalue].keypoint3}</p>
 
-                </div>
-
-                 {this.renderAllFeatureImages(numbers,this.state.offervalue,3)}
+                 {this.renderAllFeatureImagesAndContent(numbers,this.state.offervalue,3)}
 
              </div>
         </div>
@@ -161,17 +159,25 @@ render(){
 
 }
 
-class FeatureImage extends React.Component {
+class FeatureImageAndContent extends React.Component {
     constructor(props){
         super(props);
-        this.state = {offervalue: this.props.offervalue, src:this.props.src}
+        this.state = {offervalue: this.props.offervalue, src:this.props.src, paragraphtext:this.props.paragraphtext}
     }
 
     render(){
         return(
+
+            <React.Fragment>
+            <div className="feature-content"> 
+
+            <p className={this.state.offervalue == this.props.currentoffervalue ? "visible" :"hidden"}>{this.state.paragraphtext}</p>
+
+        </div>
             <div className="img-container">
-            <img className={this.state.offervalue == this.props.currentoffervalue ? "img-responsive visible" :"img-responsive hidden"} src={this.state.src}/>
-         </div>
+                <img className={this.state.offervalue == this.props.currentoffervalue ? "img-responsive visible" :"img-responsive hidden"} src={this.state.src}/>
+            </div>
+            </React.Fragment>
         );
 
     }

@@ -48,6 +48,7 @@ export default class Offer extends React.Component{
     render(){  
         return(
             <React.Fragment>
+           
             <div className="col-1-3">
                 <div className="offer-image">
                 {this.renderAllImages(numbers,this.state.offervalue)}
@@ -68,6 +69,7 @@ export default class Offer extends React.Component{
             <Video className="video-container" videoId={brands[this.state.offervalue].videoId}/>
             
             </div>
+            
             </React.Fragment>);     
     }
 }
