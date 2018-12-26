@@ -11,7 +11,7 @@ export default class Offer extends React.Component{
         super(props);
         this.state = { 
             offervalue: this.props.offervalue,
-            brands: brands
+            brands: this.props.brands
         };
         this.renderMainImage = this.renderMainImage.bind(this);
         this.renderAllImages = this.renderAllImages.bind(this);
@@ -55,9 +55,9 @@ export default class Offer extends React.Component{
                     
                 </div>
                 <div className="offer-text">
-                    <p>{brands[this.state.offervalue].offerBonus1}</p> 
-                    <p>{brands[this.state.offervalue].offerBonus2}</p>
-                    <p>{brands[this.state.offervalue].terms}</p>
+                    <p>{this.state.brands[this.state.offervalue].offerBonus1}</p> 
+                    <p>{this.state.brands[this.state.offervalue].offerBonus2}</p>
+                    <p>{this.state.brands[this.state.offervalue].terms}</p>
     
                 </div>
                     <div className="offer-button" onClick={()=>this.callOutgoing(brands[this.state.offervalue].offerlink,brands[this.state.offervalue].cpa,brands[this.state.offervalue].position,'page',this.props.icid)}>

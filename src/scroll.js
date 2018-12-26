@@ -1,14 +1,14 @@
  import React from 'react';
- import brands from './brands.js';
 
  const numbers = [0,1,2,3,4,5,6,7]
  
  export default class Scroll extends React.Component{
     constructor(props){
         super(props);
+        this.state = {brands: this.props.brands}
     }
     renderItem(i){
-       return  <Item image={brands[i].image} changeMainOffer={this.props.function} id={i} key={i}/>
+       return  <Item image={this.state.brands[i].image} changeMainOffer={this.props.function} id={i} key={i}/>
     }
 
     renderItemList(arrayofNumbers){

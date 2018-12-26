@@ -46,7 +46,7 @@ class Head extends React.Component{
              clicksCounter :0, 
              barStyle : this.props.styles,
              barContainer: this.props.barContainer,
-             Brands: this.props.brands
+             brands: this.props.brands
         }
           
         this.changeMainOffer = this.changeMainOffer.bind(this);
@@ -57,11 +57,12 @@ class Head extends React.Component{
     }
 
     changeMainOffer(id){
+        brands
         this.setState({mainOffer: id})
     }
 
     renderMainOffer(j){
-        return <Offer offervalue ={j}  icid={this.state.icid} Brands={this.state.brands}/>
+        return <Offer offervalue ={j}  icid={this.state.icid} brands={this.state.brands}/>
     }
 
     componentDidMount() {
@@ -92,7 +93,7 @@ class Head extends React.Component{
                                 <button className="button-left" onClick={this.scrollRight}>&#x3c;</button>
                         </div>
                         <div className="horizontal-scroll">
-                        <Scroll function={this.changeMainOffer} changeBarWidth={this.changeBarWidth}/>
+                        <Scroll function={this.changeMainOffer} changeBarWidth={this.changeBarWidth} brands={this.state.brands}/>
                          </div>
                     <div className="paddle-right">
                         <button className="button-right"onClick= {this.scrollLeft} >&#x3e;</button>
@@ -100,7 +101,7 @@ class Head extends React.Component{
                      </div>
 
                     <div id="details">
-                    <Reviews offervalue={this.state.mainOffer} barContainer={this.state.barContainer}/>
+                    <Reviews offervalue={this.state.mainOffer} barContainer={this.state.barContainer} brands={this.state.brands}/>
                     </div>
                         
                 </React.Fragment>
