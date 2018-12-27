@@ -71,9 +71,9 @@ class Head extends React.Component{
     moveBar(to,brands,i){
         
         let x = to+'%';
-        let slots = brands;
-        let casinos = brands;
-        let roulette = brands;
+        let slots = brands.slice();
+        let casinos = brands.slice();
+        let roulette = brands.slice();
         roulette = [roulette[3],roulette[4],roulette[2],roulette[5],roulette[6],roulette[0],roulette[1],roulette[7]];
         slots = [slots[1],slots[0],slots[7],slots[5],slots[2],slots[3],slots[4],slots[6]];
         let allCategories = []
