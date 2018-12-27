@@ -82,7 +82,7 @@ class Head extends React.Component{
         allCategories.push(roulette);
         let styleCopy = Object.assign({}, this.state.barStyle);
         styleCopy.transform = 'translateX('+x+')';
-        this.setState({barStyle :styleCopy, brands: allCategories[i]});
+        this.setState({barStyle :styleCopy, brands: allCategories[i],mainOffer: 0});
     }
 
    
