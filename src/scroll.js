@@ -6,7 +6,23 @@
     constructor(props){
         super(props);
         this.state = {brands: this.props.brands}
+        this.renderItem = this.renderItem.bind(this);
+        this.renderItemList = this.renderItemList.bind(this);
     }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.brands !== this.props.brands) {
+          this.setState({brands: this.props.brands,funcion(){{this.renderItemList(numbers)}}}
+            
+            )
+        }
+        else {
+            return false;
+        }
+      }
+
+
+
     renderItem(i){
        return  <Item image={this.state.brands[i].image} changeMainOffer={this.props.function} id={i} key={i}/>
     }
@@ -36,6 +52,14 @@
         this.state = {image: this.props.image}
     }
 
+    componentDidUpdate(prevProps) {
+        if (prevProps.image !== this.props.image) {
+          this.setState({image: this.props.image})
+        }
+        else {
+            return false;
+        }
+      }
     
     render(){
         return(

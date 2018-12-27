@@ -1,7 +1,7 @@
 import React from 'react';
-import brands from './brands.js';
 import {Outgoing} from './outgoing.js';
 import Video from './video.js';
+import brands from './brands.js';
 
 
 const numbers = [0,1,2,3,4,5,6,7]
@@ -19,8 +19,8 @@ export default class Offer extends React.Component{
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.offervalue !== this.props.offervalue) {
-          this.setState({offervalue: this.props.offervalue})
+        if (prevProps.offervalue !== this.props.offervalue || prevProps.brands !==this.props.brands) {
+          this.setState({offervalue: this.props.offervalue,brands: this.props.brands})
         }
         else {
             return false;
@@ -60,13 +60,13 @@ export default class Offer extends React.Component{
                     <p>{this.state.brands[this.state.offervalue].terms}</p>
     
                 </div>
-                    <div className="offer-button" onClick={()=>this.callOutgoing(brands[this.state.offervalue].offerlink,brands[this.state.offervalue].cpa,brands[this.state.offervalue].position,'page',this.props.icid)}>
+                    <div className="offer-button" onClick={()=>this.callOutgoing(this.state.brands[this.state.offervalue].offerlink,this.state.brands[this.state.offervalue].cpa,this.state.brands[this.state.offervalue].position,'page',this.props.icid)}>
                         <button className="main-button">Claim Bonus Offer </button>
                             
                     </div>
             </div>
             <div className="col-2-3">
-            <Video className="video-container" videoId={brands[this.state.offervalue].videoId}/>
+            <Video className="video-container" videoId={this.state.brands[this.state.offervalue].videoId}/>
             
             </div>
             
@@ -79,6 +79,7 @@ class MainImage extends React.Component{
         super(props);
         this.state = { offervalue: this.props.offervalue}
     }
+    
     render(){
      return   (
         <div className="img-container">

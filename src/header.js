@@ -5,7 +5,10 @@ import Logo from './assets/logo.png';
 export default class Header extends React.Component{
     constructor(props){
         super(props);
-        this.state = {previousPosition: 1, barStyle: this.props.barMenuStyle};
+        this.state = {
+            barStyle: this.props.barMenuStyle,
+            brands:this.props.brands
+        };
         
     }
    
@@ -29,7 +32,7 @@ render(){
             </div>
         </div>
 
-        <div onClick={()=>{this.props.changeBar(0)}}>
+        <div onClick={()=>{this.props.changeBar(0,this.state.brands)}}>
             <h1>Best Casinos </h1>
             
         </div>

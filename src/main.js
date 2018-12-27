@@ -57,33 +57,31 @@ class Head extends React.Component{
     }
 
     changeMainOffer(id){
-        brands
         this.setState({mainOffer: id})
     }
 
     renderMainOffer(j){
-        return <Offer offervalue ={j}  icid={this.state.icid} brands={this.state.brands}/>
+        return <Offer offervalue ={j}  icid={this.state.icid} brands={this.props.brands}/>
     }
 
     componentDidMount() {
         incoming.call(this);
     }
 
-    moveBar(to){
+    moveBar(to,brands){
         let x = to+'%';
+        let slots = brands;
+        slots = [slots[1],slots[0],slots[7],slots[5],slots[2],slots[3],slots[4],slots[6]];
         let styleCopy = Object.assign({}, this.state.barStyle);
         styleCopy.transform = 'translateX('+x+')';
-        this.setState({barStyle :styleCopy});
+        this.setState({barStyle :styleCopy, brands: slots});
     }
 
-    
-
-    
    
         render(){
         return ( 
                 <React.Fragment>
-                   <Header function={this.state.offervalue} changeBar={this.moveBar} barMenuStyle={this.state.barStyle}/>
+                   <Header brands={this.state.brands} function={this.state.offervalue} changeBar={this.moveBar} barMenuStyle={this.state.barStyle}/>
                     {this.renderMainOffer(this.state.mainOffer)}
                     <div className="row">
                         <p>Discover More Online Casinos</p>

@@ -14,10 +14,14 @@ export default class Reviews extends React.Component{
 }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.offervalue !== this.props.offervalue) {
-          this.setState({offervalue: this.props.offervalue})
+        if (prevProps.offervalue !== this.props.offervalue || prevProps.brands !== this.props.brands) {
+          this.setState({offervalue: this.props.offervalue,brands : this.props.brands})
+        }
+        else {
+            return false;
         }
       }
+      
 
 
       render(){
@@ -85,9 +89,10 @@ class UniqueFeatures extends React.Component {
     this.renderAllFeatureImagesAndContent = this.renderAllFeatureImagesAndContent.bind(this);
 }
 
+
 componentDidUpdate(prevProps) {
-    if (prevProps.offervalue !== this.props.offervalue) {
-      this.setState({offervalue: this.props.offervalue})
+    if (prevProps.offervalue !== this.props.offervalue || prevProps.brands !== this.props.brands) {
+      this.setState({offervalue: this.props.offervalue,brands : this.props.brands})
     }
     else {
         return false;
@@ -132,7 +137,6 @@ renderAllFeatureImagesAndContent(arrayofnumbers,offervalue,keypoint){
        }
     }
 
-    let j = 0
     const listofItems = arrayofnumbers;
     const allItems = listofItems.map((number,index)=>
     this.renderFeatureImageAndContent(number,offervalue,src[index],paragraphtext[index])
@@ -168,6 +172,15 @@ class FeatureImageAndContent extends React.Component {
         super(props);
         this.state = {offervalue: this.props.offervalue, src:this.props.src, paragraphtext:this.props.paragraphtext}
     }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.src !== this.props.src) {
+          this.setState({src: this.props.src,paragraphtext:this.props.paragraphtext})
+        }
+        else {
+            return false;
+        }
+      }
 
     render(){
         return(
