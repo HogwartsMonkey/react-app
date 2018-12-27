@@ -32,14 +32,19 @@ export default class Offer extends React.Component{
     }
     
 
-   renderMainImage(locationinArray,currentoffervalue){
-       return <MainImage offervalue={locationinArray} currentoffervalue={currentoffervalue} key={locationinArray}/>
+   renderMainImage(locationinArray,currentoffervalue,src){
+       return <MainImage offervalue={locationinArray} src={src} currentoffervalue={currentoffervalue} key={locationinArray}/>
    }
 
    renderAllImages(arrayofnumbers,offervalue){
+       let src = [];
+       let i;
+       for (i = 0;i<=7 ;i++){
+           src.push(this.state.brands[i].image)
+       }
     const listofItems = arrayofnumbers;
-    const allItems = listofItems.map((number)=>
-    this.renderMainImage(number,offervalue)
+    const allItems = listofItems.map((number,index)=>
+    this.renderMainImage(number,offervalue,src[index])
     )
 
     return allItems
@@ -77,13 +82,22 @@ export default class Offer extends React.Component{
 class MainImage extends React.Component{
     constructor(props){
         super(props);
-        this.state = { offervalue: this.props.offervalue}
+        this.state = { offervalue: this.props.offervalue,src: this.props.src}
     }
+
+    componentDidUpdate(prevProps) {
+        if (prevProps.src !== this.props.src ) {
+          this.setState({src: this.props.src})
+        }
+        else {
+            return false;
+        }
+      }
     
     render(){
      return   (
         <div className="img-container">
-            <img className={this.state.offervalue == this.props.currentoffervalue ? "img-responsive visible": "img-responsive hidden"} src={brands[this.props.offervalue].image}/>
+            <img className={this.state.offervalue == this.props.currentoffervalue ? "img-responsive visible": "img-responsive hidden"} src={this.state.src}/>
         </div>
         );
     }

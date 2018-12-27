@@ -61,20 +61,28 @@ class Head extends React.Component{
     }
 
     renderMainOffer(j){
-        return <Offer offervalue ={j}  icid={this.state.icid} brands={this.props.brands}/>
+        return <Offer offervalue ={j}  icid={this.state.icid} brands={this.state.brands}/>
     }
 
     componentDidMount() {
         incoming.call(this);
     }
 
-    moveBar(to,brands){
+    moveBar(to,brands,i){
+        
         let x = to+'%';
         let slots = brands;
+        let casinos = brands;
+        let roulette = brands;
+        roulette = [roulette[3],roulette[4],roulette[2],roulette[5],roulette[6],roulette[0],roulette[1],roulette[7]];
         slots = [slots[1],slots[0],slots[7],slots[5],slots[2],slots[3],slots[4],slots[6]];
+        let allCategories = []
+        allCategories.push(casinos);
+        allCategories.push(slots);
+        allCategories.push(roulette);
         let styleCopy = Object.assign({}, this.state.barStyle);
         styleCopy.transform = 'translateX('+x+')';
-        this.setState({barStyle :styleCopy, brands: slots});
+        this.setState({barStyle :styleCopy, brands: allCategories[i]});
     }
 
    
